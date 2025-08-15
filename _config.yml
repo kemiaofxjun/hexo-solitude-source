@@ -101,9 +101,9 @@ theme: solitude
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
-  repo: 'https://github.com/kemiaofxjun/kemiaofxjun.github.io.git'
-  branch: 'main'
+  type: git
+  repo: git@github.com-kemiaofxjun:kemiaofxjun/kemiaofxjun.github.io.git
+  branch: main
 
 # RSS Feed 配置
 feed:
