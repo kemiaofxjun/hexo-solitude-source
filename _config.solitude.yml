@@ -222,7 +222,7 @@ page:
     # Default image when no cover is set
     # 未设置封面时的默认图片
     cover:
-     - https://img.314926.xyz/images/2025/08/15/cover19.webp
+      - https://img.314926.xyz/images/2025/08/15/cover19.webp
       # - /img/default.png # 默认图片 / default cover
 # --------------------------- end ---------------------------
 
@@ -409,7 +409,7 @@ related_post:
   limit: 2
   # created: release date / updated: update date
   # created: 发布日期 / updated: 更新日期
-  date_type: created
+  date_type: updated
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -422,10 +422,10 @@ right_menu:
   commentBarrage: true
   # Whether to display the browser's context menu when hold Ctrl key.
   # 是否在按住 Ctrl 键时显示浏览器右键菜单
-  ctrlOriginalMenu: true
+  ctrlOriginalMenu: false
   # Simplified and Traditional Chinese translation.
   # 简繁体转换
-  translate: true
+  translate: false
   # Custom list
   # 自定义列表
   custom_list:
@@ -468,12 +468,12 @@ mermaid: true
 
 # --------------------------- start ---------------------------
 # Chart.js
-chart: true
+chart: false
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
 # typeit
-typeit: true
+typeit: false
 # --------------------------- end ---------------------------
 
 ### Extended configuration
@@ -676,11 +676,11 @@ highlight:
 # --------------------------- start ---------------------------
 # Lightbox
 # 图片灯箱
-lightbox:
+lightbox: true
 # warning: Please select any one, but cannot be turned on at the same time.
 # 警告: 请任选其一，但不能同时开启。
-fancybox: true # fancybox
-mediumZoom: false # mediumZoom
+fancybox: false # fancybox
+mediumZoom: true # mediumZoom
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -725,10 +725,10 @@ katex:
   enable: true
   # Whether to load on each page
   # 是否在每个页面加载
-  per_page: true
+  per_page: false
   # Whether to enable copy formula
   # 是否启用复制公式
-  copytex: false
+  copytex: true
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -746,7 +746,7 @@ verify_site:
 # CSS 前缀
 # When turned on, it will automatically prefix the CSS (to get better browser support), but this will increase the size of the CSS file.
 # 开启后会自动给 CSS 加前缀（以获得更好的浏览器支持），但这会增加 CSS 文件的大小。
-css_prefix: true
+css_prefix: false
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -815,7 +815,7 @@ comment:
     limit: 5 # 评论数 / Number of comments
 # Twikoo: https://solitude.js.org/configuration/comment/twikoo
 twikoo: # https://twikoo.js.org/
-  envId: https://kemiao-twikoo.050815.xyz/ # url: https://twikoo.sondy.top/
+  envId: https://kemiao-twikoo.050815.xyz # url: https://twikoo.sondy.top/
   region: # Environment locale, default is ap-shanghai, Tencent cloud environment fill ap-shanghai or ap-guangzhou; Vercel environment do not fill the.
   style: true # Use custom styles when turned on
   accessToken: # AccessToken
@@ -891,7 +891,7 @@ music:
   # 默认音量
   volume: 0.8
   # 是否自动播放
-  mutex: true
+  mutex: false
   # 播放方式：list / random
   order: list
 # --------------------------- end ---------------------------
@@ -932,10 +932,10 @@ recent_comments:
 
 # --------------------------- start ---------------------------
 # Busuanzi
-busuanzi: true
+busuanzi: 'true'
 # 0: Original / 1: Custom
 # 0: 原版 / 1: 自定义版
-busuanzi_use: 0
+busuanzi_use: 1
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
