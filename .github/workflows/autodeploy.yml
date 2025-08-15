@@ -1,10 +1,10 @@
-# 当有改动推送到master分支时，启动Action
+# 当有改动推送到 main 分支时，启动 Action
 name: 自动部署
 
 on:
   push:
     branches:
-      - main #2020年10月后github新建仓库默认分支改为main，注意更改
+      - main
 
   release:
     types:
@@ -14,44 +14,43 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: 检查分支
-      uses: actions/checkout@v2
-      with:
-        ref: main #2020年10月后github新建仓库默认分支改为main，注意更改
+      - name: 检查分支
+        uses: actions/checkout@v4
+        with:
+          ref: main
 
-    - name: 安装 Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: "22.x" #action使用的node版本，建议大版本和本地保持一致。可以在本地用node -v查询版本号。
+      - name: 安装 Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
 
-    - name: 安装 Hexo
-      run: |
-        export TZ='Asia/Shanghai'
-        npm install hexo-cli -g
+      - name: 安装 Hexo
+        run: |
+          export TZ='Asia/Shanghai'
+          npm install hexo-cli -g
 
-    - name: 缓存 Hexo
-      uses: actions/cache@v4
-      id: cache
-      with:
-        path: node_modules
-        key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+      - name: 缓存 Hexo
+        uses: actions/cache@v4
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-    - name: 安装依赖
-      if: steps.cache.outputs.cache-hit != 'true'
-      run: |
-        npm install --save
+      - name: 安装依赖
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm ci
 
-    - name: 生成静态文件
-      run: |
-        hexo clean
-        hexo generate
+      - name: 生成静态文件
+        run: |
+          hexo clean
+          hexo generate
 
-    - name: 部署 #此处master:master 指从本地的master分支提交到远程仓库的master分支，若远程仓库没有对应分支则新建一个。如有其他需要，可以根据自己的需求更改。
-      run: |
-        cd ./public
-        git init
-        git config --global user.name '${{ secrets.GITHUBUSERNAME }}'
-        git config --global user.email '${{ secrets.GITHUBEMAIL }}'
-        git add .
-        git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
-        git push --force --quiet "https://${{ secrets.GITHUBUSERNAME }}:${{ secrets.GITHUBTOKEN }}@github.com/kemiaofxjun/kemiaofxjun.github.io.git" main:main
+      - name: 部署
+        run: |
+          cd ./public
+          git init -b main
+          git config --global user.name '${{ secrets.GITHUBUSERNAME }}'
+          git config --global user.email '${{ secrets.GITHUBEMAIL }}'
+          git add .
+          git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated by GitHub Actions"
+          git push --force --quiet "https://${{ secrets.GITHUBUSERNAME }}:${{ secrets.GITHUBTOKEN }}@github.com/kemiaofxjun/kemiaofxjun.github.io.git" main
