@@ -1025,9 +1025,9 @@ electric_clock:
     type: class
     name: sticky_layout
     index: 0
-  loading: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif #加载动画自定义
-  clock_css: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css
-  clock_js: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js
+  loading: https://static.314926.xyz/js/clock-anzhiyu/loading.gif #加载动画自定义
+  clock_css: https://static.314926.xyz/css/clock-anzhiyu/clock.min.css
+  clock_js: https://static.314926.xyz/js/clock-anzhiyu/clock.min.js
   ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
   qweather_key: # 和风天气key
   gaud_map_key: 40748970c25c6f81e812045a6a4601b7 # 高得地图web服务key

@@ -40,6 +40,8 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
           npm install --save
+          npm install hexo-butterfly-clock-anzhiyu --save
+          npm install hexo-algoliasearch --save
 
       - name: 生成静态文件
         run: |
