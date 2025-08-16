@@ -21,7 +21,7 @@ site:
   name:
     class: text # text / i_class / img
     custom: 喵落阁 # Solitude / fas fa-ghost / /img/pwa/favicon.ico
-  icon: /img/pwa/favicon.png # Site icon / 网站图标
+  icon: https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp # Site icon / 网站图标
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -31,8 +31,8 @@ nav:
   # Left Box
   # 左侧盒子
   group:
-   project: # name
-     Solitude: https://github.com/everfu/hexo-theme-solitude || /img/pwa/favicon.ico # name: url || icon
+   资源分享: # name
+     TG频道: https://t.me/kemiaofx_me || https://img.314926.xyz/images/2025/08/16/telegram.webp # name: url || icon
 
   # Menu
   # 菜单
@@ -42,14 +42,14 @@ nav:
       归档: /archives/ || fas fa-folder-closed # item name: link || icon
       分类: /categories/ || fas fa-clone
       标签: /tags/ || fas fa-tags
-    # 友链:
-    #   朋友圈: /moments/ || fas fa-wifi
-    #   友情链接: /links/ || fas fa-user-group
-    #   宝藏博主: javascript:travelling() || fas fa-gift
-    # 我的:
-    #   关于: /about/ || fas fa-user
-    #   装备: /kit/ || fas fa-laptop
-    #   音乐馆: /music/ || fas fa-music
+    友链:
+      朋友圈: /moments/ || fas fa-wifi
+      友情链接: /links/ || fas fa-user-group
+      宝藏博主: javascript:travelling() || fas fa-gift
+    我的:
+      关于: /about/ || fas fa-user
+      装备: /kit/ || fas fa-laptop
+      音乐馆: /music/ || fas fa-music
 
   # Right button
   # 右侧按钮
@@ -535,9 +535,9 @@ footer:
   # 友情链接
   group:
     导航:
-      Archives: /archives/
-      Categories: /categories/
-      Tags: /tags/
+      归档: /archives/
+      分类: /categories/
+      标签: /tags/
     排列:
       Cookies: /cookies/
       Privacy: /privacy/
@@ -548,7 +548,7 @@ footer:
 
   # 备案
   beian:
-    - name: 萌ICP备20250530·
+    - name: 萌ICP备20250530号
       icon: https://img.314926.xyz/images/2025/08/15/mengicp.webp
       url: https://icp.gov.moe/?keyword=20250530
     # - name: 湘ICP备2024080357号-1
@@ -725,7 +725,7 @@ katex:
   enable: true
   # Whether to load on each page
   # 是否在每个页面加载
-  per_page: false
+  per_page: true
   # Whether to enable copy formula
   # 是否启用复制公式
   copytex: true
@@ -735,10 +735,10 @@ katex:
 # verification
 # 验证
 verify_site:
-  # - name: google-site-verification
-  #   content: xxxxxx
-  # - name: baidu-site-verification
-  #   content: xxxxxxx
+  - name: google-site-verification
+    content: G-6EQ9TCJW1T
+  - name: baidu-site-verification
+    content: f77798d7dbd2a4f6f05cd760539e522b
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -768,7 +768,7 @@ extends:
 # PWA
 # Progressive Web App
 pwa:
-  enable: false
+  enable: true
   manifest: /manifest.json # manifest.json
   theme_color: "#006a73" # Theme color
   mask_icon: /img/pwa/favicon.png # Mask icon
@@ -912,8 +912,8 @@ envelope:
 # Brevity Page
 # 即刻短文
 brevity:
-  enable: false
-  home_mini: false
+  enable: true
+  home_mini: true
   music: false
   page: /essay/
   style: 1

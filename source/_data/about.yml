@@ -1,0 +1,208 @@
+# 悬浮标签模块
+authorinfo:
+  leftTags:
+    - 🤖️ 资源分享者
+    - 📖 博客写作者
+    - 📚️ 小说爱好者
+  rightTags:
+    - 摆烂大学牲 👍️
+    - 无业游民 🏖️
+    - 不爱聊天 🤐️
+  image: https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp
+
+# 标题
+title: 关于本站
+
+# 介绍块
+# 这个模块必须写完整，如果不需要可以不写
+contentinfo: # 顶部个人信息展示
+  sup: 你好，很高兴认识你👋
+  name: 我叫克喵爱吃卤面/KeMiao # 名称
+  title: 是一名学生、资源分享者、博主 # 介绍
+  tip: 在这里
+  slogan: 记录<br>原创或者转载
+  mask:
+    - 生活记录
+    - 资源分享
+    - 踩坑教程
+
+# 技能图标轮播块
+# 此模块和生涯模块在一行，如不写则生涯模块单独占满一行。
+# 主要就是 tags 中的 img 和 icon 两种，其中 img 是图片地址，icon 是图标名称，你可以在 Skill Icons 中找到图标名称，你也可以自己寻找优质的图片图标。
+skills: # 根据需求添加
+  title: 技能
+  subtitle: 开启创造力
+  tags:
+    - title: astro
+      color: "#ff0000"
+      img: https://img.314926.xyz/images/2025/08/16/astro.svg
+    - title: Docker
+      color: "#57b6e6"
+      icon: fab fa-docker
+    - title: Node
+      color: "#333"
+      icon: fab fa-node
+    - title: Vue
+      color: "#b8f0ae"
+      icon: fab fa-vuejs
+    - title: JS
+      color: "#f7cb4f"
+      icon: fab fa-js
+    - title: HTML
+      color: "#e9572b"
+      icon: fab fa-html5
+    - title: Git
+      color: "#df5b40"
+      icon: fab fa-git
+    - title: Hexo
+      color: "#fff"
+      img: https://img.314926.xyz/images/2025/08/16/hexo.webp
+
+# 生涯模块
+# 生涯模块和技能图标轮播模块在一行，如不写则技能图标轮播模块单独占满一行。
+careers:
+  title: 生涯
+  subtitle: 无限进步
+  items:
+    - school: 电气工程
+      major: 学习
+      color: "#357ef5"
+  image: https://img.314926.xyz/images/2025/08/16/time-line.webp
+
+# 性格模块
+personalities:
+  tips: 性格
+  title: 提倡者
+  color: "#56a178"
+  type: INFJ-T
+  image: https://img.314926.xyz/images/2025/08/16/infj2.svg
+  link: https://www.16personalities.com/
+  linkText: 16personalities
+  typeLink: https://www.16personalities.com/ch/INFJ-人格
+  typeName: 提倡者
+  myphoto: https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp
+
+# 座右铭
+motto:
+  title: 座右铭
+  prefix: 愿你看轻一切真相后，
+  content: 依旧热爱你的家人和朋友。
+
+# 特长模块
+expertise:
+  title: 特长
+  prefix: 自动化，英语，地理
+  specialist: 大学牲
+  content: 摆烂能力
+  level: MAX
+
+# 游戏模块
+# 这个模块可以写多个，但最好不要超过 4 个。
+game:
+  - title: 游戏爱好
+    img: https://img.314926.xyz/images/2025/08/15/cover22.webp
+    subtitle: 饥荒
+    box_shadow: "0 -69px 203px 11px #04120f inset"
+    # icon_group:
+    #   - https://7.isyangs.cn/66/6738b472ce11f-66.webp
+    #   - https://7.isyangs.cn/66/6738b48045a5b-66.webp
+    tips_left: 大力士、女武神
+    tips_right: Krylin
+  - title: 游戏爱好
+    img: https://img.314926.xyz/images/2025/07/30/terrraria.webp
+    subtitle: Terraria
+    box_shadow: "0 -69px 203px 11px #415dc9 inset"
+    tips_right: "Hero of Etheria"
+
+# 爱好模块
+likes:
+  - type: "comic"
+    tips: 爱好番剧 # 右上角提示
+    title: 追番 # 标题
+    subtips: "科幻、动漫、剧情好" # 左下小字，可不要
+    list: # 最好就是五个或以上，相信你们肯定没那么少的。
+      - name: 怪奇物语 # 动漫或影视名
+        href: https://movie.douban.com/subject/26359270/ # B站或豆瓣某个位置
+        cover: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2364206200.webp # 封面图
+      - name: 泽塔奥特曼
+        href: https://movie.douban.com/subject/35013632/
+        cover: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2606122497.webp
+      - name: 流浪地球2
+        href: https://movie.douban.com/subject/35267208/
+        cover: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2916835424.webp
+      - name: 星游记
+        href: https://movie.douban.com/subject/6952623/
+        cover: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1292004897.webp
+      - name: 鬼灭之刃
+        href: https://movie.douban.com/subject/35620761/
+        cover: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2694561204.webp
+    button: true # false 可以关闭右边按钮
+    button_link: "/pyq/" # 跳转路径
+    button_text: "观看记录" # 按钮文字
+  - type: like-technology
+    bg: https://img.314926.xyz/images/2025/07/30/jihuangcover.webp
+    tips: 关注偏好
+    title: 小说
+    subtips: 小说狂热爱好者
+  - type: like-music
+    bg: https://img.314926.xyz/images/2025/07/31/cover12.webp
+    tips: 音乐偏好
+    title: 国风、古典、摇滚
+    subtips: 跟 克喵爱吃卤面 一起欣赏更多音乐
+    button: true
+    button_text: 更多推荐
+    button_link: /music/
+
+# 网站统计数据展示模块
+tj: # 统计
+  provider: custom # 值为 51la（51la网站统计）或 custom（自建统计）
+  url: https://unami-kemiao.kemiaosw.top/ # 需要到51la官网注册自行获取 or 自行搭建 Heo 的 百度统计项目，填写访问地址即可
+  img: https://i.p-i.vip/33/20250725-6883987819a97.webp # 背景
+  desc: 本站采用自建数据统计
+
+# 个人信息模块
+oneself: # 按需填写
+  location: 中国，江苏省 # 所在位置
+  birthYear: 2005 # 生日
+  university: 南工大 # 毕业学校
+  major: 电气工程 # 专业
+  occupation: 学生 # 职位
+  map: # 你所在位置的地图
+    light: https://img.314926.xyz/images/2025/07/30/map1.webp # 白天
+    dark: https://img.314926.xyz/images/2025/07/30/map1.webp # 夜晚
+
+# 自定义
+cause:
+  tip: 心路历程
+  title: 为什么建站？
+  content:
+    <br>创建这个站的时候，想要就是能够有一个自己能够<b>积累知识、积累兴趣</b>的地方。和他人分享，会让这些成为积累和沉淀。如果能够帮助到更多的人，帮助更多人解决问题，那一定是非常棒的事情。
+    <br>
+    与大多数垂直类的技术博客不同，这里的种类会非常的繁杂，有<b>技能的教程干货</b>、有<b>生活上的吐槽和妙招</b>、有<b>话题上的思考和想法</b>。一般我研究什么、发现了什么都会分享在这里。
+    <br>
+    这些就是创造这个小站的本意，<b>也是我分享生活的方式</b>。有幸能和你相遇在这里，相信我们能共同留下一段美好记忆。
+    <br>
+
+# 十年之约
+tenyear:
+  tips: 十年之约
+  title: 一个人的寂寞，一群人的狂欢。
+  start: 2025-08-16
+  end: 2035-08-16
+
+# 打赏列表
+award:
+  enable: true
+  description: 感谢赞赏的人，因为你们，让我感受到写博客这件事情能够给你们创造了价值。这会让我在这条路上走得更远。
+  tips: 总金额：¥ {sum}，将全部用于博客的维护和更新。 # 必须带 {sum}，否则无法显示总金额
+rewardList: # 底部捐赠
+  # - name: "❖星港◎Star☆"
+  #   money: 100
+  #   time: 2025-01-01
+  #   icon: fab fa-weixin
+  #   color: "#09bb07"
+  # - name: "沫塔尔猫"
+  #   money: 100
+  #   time: 2025-01-01
+  #   icon: fab fa-alipay
+  #   color: "#1677FF"
