@@ -123,19 +123,19 @@ likes:
     list: # 最好就是五个或以上，相信你们肯定没那么少的。
       - name: 怪奇物语 # 动漫或影视名
         href: https://movie.douban.com/subject/26359270/ # B站或豆瓣某个位置
-        cover: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2364206200.webp # 封面图
+        cover: https://img.314926.xyz/images/2025/08/16/guaiqiwuyu.webp # 封面图
       - name: 泽塔奥特曼
         href: https://movie.douban.com/subject/35013632/
-        cover: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2606122497.webp
+        cover: https://img.314926.xyz/images/2025/08/16/zeta.webp
       - name: 流浪地球2
         href: https://movie.douban.com/subject/35267208/
-        cover: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2916835424.webp
+        cover: https://img.314926.xyz/images/2025/08/16/lilang.webp
       - name: 星游记
         href: https://movie.douban.com/subject/6952623/
-        cover: https://img3.doubanio.com/view/photo/s_ratio_poster/public/p1292004897.webp
+        cover: https://img.314926.xyz/images/2025/08/16/xingyouji.webp
       - name: 鬼灭之刃
         href: https://movie.douban.com/subject/35620761/
-        cover: https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2694561204.webp
+        cover: https://img.314926.xyz/images/2025/08/16/guimie.webp
     button: true # false 可以关闭右边按钮
     button_link: "/pyq/" # 跳转路径
     button_text: "观看记录" # 按钮文字
