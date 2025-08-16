@@ -1,0 +1,12 @@
+/* 电子钟整体向左上平移 */
+#hexo_electric_clock {
+  transform: translate(-20px, -20px); /* 水平向左平移20px，垂直向上平移20px */
+  /* 或者使用 margin 方案（二选一） */
+  /* margin-left: -20px; */
+  /* margin-top: -20px; */
+}
+
+/* 确保父容器不会裁剪内容 */
+#hexo_electric_clock_container {
+  overflow: visible !important;
+}

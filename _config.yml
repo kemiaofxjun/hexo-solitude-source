@@ -14,7 +14,7 @@ timezone: 'Asia/Shanghai'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://myboke.kemiaosw.to
-permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -117,34 +117,34 @@ feed:
   order_by: -date     # 按日期倒序排列
   autodiscovery: true # 在 HTML 头部添加自动发现标签
 
-# markdown:
-  preset: 'default'
+# 数学公式渲染配置
+markdown:
+  preset: 'default' # 使用的 MD 语法，默认使用的 GFM
   render:
-    html: true
+    html: true # 渲染 html
     xhtmlOut: false
-    langPrefix: 'language-'
+    langPrefix: 'language-' # 在代码块的类名中添加前缀（指定语言时）。
     breaks: true
-    linkify: true
-    typographer: true
-    quotes: '“”‘’'
+    linkify: true # 如果你写了一个链接而不是 [name](link) 方式，会自动识别为链接并渲染。
+    typographer: true # 将替换常见的印刷元素。
+    quotes: '“”‘’' # 替换文章张的 "" '' 号
   enable_rules:
   disable_rules:
-  plugins:
-    - '@renbaoshuo/markdown-it-katex'
+  plugins: # 使用插件
   anchors:
-    level: 2
+    level: 2 # 渲染标题的级别（h1,h2,h3）
     collisionSuffix: ''
-    permalink: false
-    permalinkClass: 'header-anchor'
+    permalink: true
+    permalinkClass: 'headerlink'
     permalinkSide: 'left'
-    permalinkSymbol: '¶'
+    permalinkSymbol: ''
     case: 0
     separator: '-'
-  images:
-    lazyload: false
+  images: # 图片的一些编译
+    lazyload: true # 是否需要渲染 lazyload
     prepend_root: false
     post_asset: false
-  inline: false  # https://markdown-it.github.io/markdown-it/#MarkdownIt.renderInline
+  inline: false
 
 swpp:
   # 是否启用插件
@@ -152,3 +152,31 @@ swpp:
   # 是否在发布前自动执行脚本
   auto_exec: true
   gen_dom: true
+
+# 文章链接转数字或字母：https://github.com/rozbo/hexo-abbrlink
+abbrlink:
+    alg: crc16   #算法： crc16(default) and crc32
+    rep: hex     #进制： dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex
+
+# https://github.com/hexojs/hexo-generator-sitemap
+sitemap:
+  path: sitemap.xml
+  rel: false
+  tags: true
+  categories: true
+
+algolia:
+  appId: "80FXZQQH8N"
+  apiKey: "3d6ce936be0c72bc2393d2416d9dd990"
+  adminApiKey: "ee65e938db42a39386d6806444bbdf27"
+  chunkSize: 5000
+  indexName: "hexo-solitude"
+  fields:
+    - content:strip:truncate,0,500
+    - excerpt:strip
+    - gallery
+    - permalink
+    - photos
+    - slug
+    - tags
+    - title
