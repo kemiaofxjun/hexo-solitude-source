@@ -767,6 +767,7 @@ extends:
   body:
     - <script src="https://static.314926.xyz/js/lunnar/chinese-lunar.js"></script>
     - <script src="/schedule/schedule.js"></script>
+    - <script defer pjax data-api="https://busuanzi.050815.xyz/api" data-prefix="busuanzi_value" src="https://busuanzi.050815.xyz/js"></script>
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
 # --------------------------- end ---------------------------
 
@@ -944,27 +945,27 @@ busuanzi: 'true'
 busuanzi_use: 1
 # --------------------------- end ---------------------------
 
-# electric_clock
-# see https://blog.anheyu.com/posts/fc18.html
-electric_clock:
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  enable_page: all # 应用页面
-  exclude:
-  # - /posts/
-  # - /about/
-  layout: # 挂载容器类型
-    type: class
-    name: sticky_layout
-    index: 0
-  loading: https://static.314926.xyz/js/clock-anzhiyu/loading.gif #加载动画自定义
-  clock_css: https://static.314926.xyz/css/clock-anzhiyu/clock.min.css
-  clock_js: https://static.314926.xyz/js/clock-anzhiyu/clock.min.js
-  ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
-  qweather_key: # 和风天气key
-  gaud_map_key: 40748970c25c6f81e812045a6a4601b7 # 高得地图web服务key
-  default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
-  rectangle: 112.982279,28.19409 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
+# # electric_clock
+# # see https://blog.anheyu.com/posts/fc18.html
+# electric_clock:
+#   enable: true # 开关
+#   priority: 5 #过滤器优先权
+#   enable_page: all # 应用页面
+#   exclude:
+#   # - /posts/
+#   # - /about/
+#   layout: # 挂载容器类型
+#     type: class
+#     name: sticky_layout
+#     index: 0
+#   loading: https://static.314926.xyz/js/clock-anzhiyu/loading.gif #加载动画自定义
+#   clock_css: https://static.314926.xyz/css/clock-anzhiyu/clock.min.css
+#   clock_js: https://static.314926.xyz/js/clock-anzhiyu/clock.min.js
+#   ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
+#   qweather_key: # 和风天气key
+#   gaud_map_key: 40748970c25c6f81e812045a6a4601b7 # 高得地图web服务key
+#   default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
+#   rectangle: 112.982279,28.19409 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置
 
 # --------------------------- start ---------------------------
 # Google Adsense
