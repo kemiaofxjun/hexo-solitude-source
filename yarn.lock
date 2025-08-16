@@ -598,7 +598,7 @@ he@1.2.0:
 
 hexo-cli@^4.3.2:
   version "4.3.2"
-  resolved "https://registry.npmmirror.com/hexo-cli/-/hexo-cli-4.3.2.tgz"
+  resolved "https://registry.npmmirror.com/hexo-cli/-/hexo-cli-4.3.2.tgz#7e7d02da137d9fa461a4356964793c56e92b29e6"
   integrity sha512-druJeBgLpG9ncDS5AhBHdAXk0G4CFj8Qes09pApyZ6bR+nJW1JYiDMuilhudaKDdq+1l49jWXVTidkcb7p0Jbw==
   dependencies:
     abbrev "^2.0.0"
