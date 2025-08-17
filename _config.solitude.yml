@@ -50,6 +50,7 @@ nav:
       留言板: /comments/ || fas fa-comment
       追番: /bangumis/ || fas fa-film
       画廊: /gallery/ || fas fa-images
+      最近评论: /recentcomment/ || fas fa-comments
     我的:
       关于: /about/ || fas fa-user
       装备: /kit/ || fas fa-laptop
@@ -155,7 +156,7 @@ aside:
     # 社交信息图标
     information:
      Github: https://github.com/kemiaofxjun || fab fa-github # Name: link || icon
-     Bilibili: https://space.bilibili.com/1329819902 || fab fa-bilibili
+     Email: mailto:me@mail.kemeow.top || fas fa-envelope
   # --------------------------- end ---------------------------
 
   # --------------------------- start ---------------------------
@@ -533,8 +534,12 @@ footer:
     left:
       Github: https://github.com/kemiaofxjun || fab fa-github # 名称: 链接 || 图标
       Mail: mailto:me@mail.kemeow.top || far fa-envelope
+      Telegram: https://t.me/kemiaosw || fab fa-telegram
     right:
       Bilibili: https://space.bilibili.com/3546643173477234 || fab fa-bilibili
+      QQ: https://qm.qq.com/q/pgVDq6hcvQ || fab fa-qq
+      X: https://x.com/kemiaosw || fab fa-twitter
+      netease: https://music.163.com/#/user/home?id=1725716511 || fab fa-spotify
       # Douyin: https://v.douyin.com/iJsLc8jt/ || fab fa-tiktok
   # 友情链接
   group:
