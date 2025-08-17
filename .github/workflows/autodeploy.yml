@@ -40,6 +40,7 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
           npm install --save
+          npm install yamljs --save
           npm install hexo-algoliasearch --save
           npm install hexo-bilibili-bangumi --save
 
