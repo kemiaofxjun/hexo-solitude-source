@@ -1,0 +1,16 @@
+banner_suffix:
+links:
+  - class_name: 小伙伴
+    descr: 一些可爱的朋友🥰
+    type: item
+    suffix:
+    link_list:
+      - name: ❖星港◎Star☆
+        link: https://blog.starsharbor.com
+        avatar: https://bu.dusays.com/2025/04/11/67f92f6fcfb26.webp
+        descr: 以博客记录生活与热爱！
+      - name: 纸鹿摸鱼处
+        link: https://blog.zhilu.site/
+        avatar: https://www.zhilu.site/api/avatar.png
+        descr: 纸鹿至麓不知路，支炉制露不止漉
+      

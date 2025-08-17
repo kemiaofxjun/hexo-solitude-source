@@ -46,6 +46,10 @@ nav:
       朋友圈: /moments/ || fas fa-wifi
       友情链接: /links/ || fas fa-user-group
       宝藏博主: javascript:travelling() || fas fa-gift
+    页面:
+      留言板: /comments/ || fas fa-comment
+      追番: /bangumis/ || fas fa-film
+      画廊: /gallery/ || fas fa-images
     我的:
       关于: /about/ || fas fa-user
       装备: /kit/ || fas fa-laptop
@@ -907,7 +911,7 @@ music:
 # Danmaku Page
 # 弹幕留言页面
 envelope:
-  enable: false
+  enable: true
   line: 10 # 显示行数
   speed: 20 # 播放速度
   hover: true # 鼠标悬停暂停
@@ -931,7 +935,7 @@ brevity:
 # Recent comments Page
 # 最近评论页面
 recent_comments:
-  enable: false
+  enable: true
   limit: 50 # ⚠️waline 仅支持最大50条评论 / ⚠️waline only supports a maximum of 50 comments
   cache: 0.2 # 1 = 1天 / 1 = 1 day
   page: /recentcomments/ # 最近评论页面 / recent comments page

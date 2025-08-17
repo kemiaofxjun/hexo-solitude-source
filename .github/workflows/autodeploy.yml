@@ -40,13 +40,15 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
           npm install --save
-          npm install hexo-butterfly-clock-anzhiyu --save
           npm install hexo-algoliasearch --save
+          npm install hexo-bilibili-bangumi --save
 
       - name: 生成静态文件
         run: |
           hexo clean
+          node ./link.js
           hexo generate
+          hexo bangumi -u
           hexo algolia
 
       - name: 部署
