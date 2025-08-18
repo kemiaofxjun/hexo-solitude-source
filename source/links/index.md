@@ -8,13 +8,23 @@ data: links
 
 ## Qexo 友链信息 && 申请友链
 
+<!-- 1. 友链容器 -->
 <div id="qexo-friends"></div>
-<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css"/>
-<script src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
-<script>loadQexoFriends("qexo-friends", "https://qexo.kemeow.top");</script>
+
+<!-- 2. 友链样式表 -->
+<link rel="stylesheet" href="https://static.314926.xyz/css/qexo-friends/friends.css" />
+
+<!-- 3. 友链脚本 -->
+<script src="https://static.314926.xyz/js/friend_api/friends.js"></script>
+
+<!-- 4. 调用函数：第二个参数换成你在 Qexo 后台设置的「站点名」
+                  （不是域名，是你添加友链时填的“站点名称”） -->
+<script>
+  loadQexoFriends("qexo-friends", "https://qexo.kemeow.top");   // ← 改成你自己的站点名
+</script>
 
 <div id="friends-api"></div>
-<script src="https://static.314926.xyz/js/friend_api/friends-api.js"></script>
+<script src="https://unpkg.com/qexo-friends/friends-api.js"></script>
 <script>qexo_friend_api("friends-api","https://qexo.kemeow.top");</script>
 
 ---
