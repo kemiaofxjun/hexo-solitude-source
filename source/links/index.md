@@ -10,10 +10,34 @@ data: links
 
 <!-- 1. 友链容器 -->
 {% raw %}
+<!-- 1. 占位节点 -->
 <div id="qexo-friends"></div>
-<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css"/>
-<script src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
-<script>document.addEventListener('pjax:complete', function () {if(document.querySelector("#qexo-friends")){loadQexoFriends("qexo-friends", "https://qexo.kemeow.top")}});loadQexoFriends("qexo-friends", "https://qexo.kemeow.top")</script>
+
+<!-- 2. 异步加载样式 & 脚本，并初始化 -->
+<script>
+(function () {
+    /* 动态插入 CSS */
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://unpkg.com/qexo-friends/friends.css';
+    document.head.appendChild(link);
+
+    /* 动态加载 JS */
+    const script = document.createElement('script');
+    script.src = 'https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js';
+    script.async = true;
+    script.onload = run;          // 首次执行
+    document.head.appendChild(script);
+
+    /* 封装初始化函数，供首次和 PJAX 调用 */
+    function run() {
+        loadQexoFriends('qexo-friends', 'https://qexo.kemeow.top');
+    }
+
+    /* PJAX 完成后重新渲染 */
+    document.addEventListener('pjax:complete', run);
+})();
+</script>
 {% endraw %}
 
 {% raw %}
@@ -46,7 +70,7 @@ data: links
 {% endraw %}
 ---
 
-## 友情链接
+## 友情链接(同样可以)
 
 申请友链详情见[仓库](https://github.com/kemiaofxjun/Friends)
 
