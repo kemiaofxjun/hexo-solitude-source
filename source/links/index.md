@@ -17,11 +17,7 @@ data: links
       loadQexoFriends('qexo-friends', 'https://qexo.kemeow.top');
     }
   }
-
-  // 第一次加载
   initFriends();
-
-  // PJAX 后重新加载
   document.addEventListener('pjax:complete', initFriends);
 </script>
 
