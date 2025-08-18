@@ -8,10 +8,19 @@ data: links
 
 ## Qexo 友链信息 && 申请友链
 
+<!-- 1. 友链容器 -->
 <div id="qexo-friends"></div>
-<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css"/>
+
+<!-- 2. 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css" />
+
+<!-- 3. 引入脚本 -->
 <script src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
-<script>loadQexoFriends("qexo-friends", "https://qexo.kemeow.top")</script>
+
+<!-- 4. 执行加载 -->
+<script>
+  loadQexoFriends("qexo-friends", "https://qexo.kemeow.top");
+</script>
 
 <div id="friends-api"></div>
 <script src="https://static.314926.xyz/js/friend_api/friends-api.js"></script>
