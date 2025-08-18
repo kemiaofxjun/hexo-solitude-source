@@ -13,7 +13,9 @@ data: links
 <script src="/qexo-links/friends.js"></script>
 <script>loadQexoFriends("qexo-friends", "https://qexo.kemeow.top")</script>
 
----
+<div id="friends-api"></div>
+<script src="/js/custom.js"></script>
+<script>qexo_friend_api("friends-api","https://qexo.kemeow.top","");</script>
 
 ## 友情链接(同样可以)
 
