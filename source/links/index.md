@@ -8,51 +8,20 @@ data: links
 
 ## Qexo 友链信息 && 申请友链
 
-<!-- ===== 友链列表 ===== -->
-<div id="qexo-friends-list"></div>
-
-<!-- ===== 友链申请表单 ===== -->
-<div id="qexo-friends-apply"></div>
-
-<!-- ===== 样式（通用） ===== -->
-<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css" />
-
-<!-- ===== 异步加载脚本 ===== -->
+<div id="qexo-friends"></div>
+<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css"/>
+<script src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
 <script>
-(function () {
-    const QEXO = 'https://qexo.kemeow.top';   // 统一域名
-
-    /* 1. 加载列表脚本 */
-    const list = document.createElement('script');
-    list.src = 'https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js';
-    list.async = true;
-    list.onload = () => {
-        if (document.getElementById('qexo-friends-list')) {
-            loadQexoFriends('qexo-friends-list', QEXO);
-        }
-    };
-    document.head.appendChild(list);
-
-    /* 2. 加载申请表单脚本 */
-    const api = document.createElement('script');
-    api.src = '/js/custom.js';
-    api.async = true;
-    api.onload = () => {
-        if (document.getElementById('qexo-friends-apply')) {
-            qexo_friend_api('qexo-friends-apply', QEXO, '');
-        }
-    };
-    document.head.appendChild(api);
-
-    /* 3. 支持 PJAX & Turbo 等无刷新跳转 */
-    document.addEventListener('pjax:complete', () => {
-        if (window.loadQexoFriends && document.getElementById('qexo-friends-list'))
-            loadQexoFriends('qexo-friends-list', QEXO);
-        if (window.qexo_friend_api && document.getElementById('qexo-friends-apply'))
-            qexo_friend_api('qexo-friends-apply', QEXO, '');
-    });
-})();
+/* 初次加载 */
+loadQexoFriends("qexo-friends", "https://qexo.kemeow.top");
+document.addEventListener('pjax:complete', function () {
+    loadQexoFriends("qexo-friends", "https://qexo.kemeow.top");
+});
 </script>
+
+<div id="friends-api"></div>
+<script src="/js/custom.js"></script>
+<script>qexo_friend_api("friends-api","https://qexo.kemeow.top","");</script>
 
 ---
 
