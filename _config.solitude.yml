@@ -776,6 +776,7 @@ extends:
   # 插入到 body
   body:
     - <script src="https://static.314926.xyz/js/lunnar/chinese-lunar.js"></script>
+    - <script src="/js/custom.js"></script>
     - <script src="/schedule/schedule.js"></script>
     - <script defer pjax data-api="https://busuanzi.050815.xyz/api" data-prefix="busuanzi_value" src="https://busuanzi.050815.xyz/js"></script>
   #  - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
