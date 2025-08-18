@@ -9,24 +9,41 @@ data: links
 ## Qexo 友链信息 && 申请友链
 
 <!-- 1. 友链容器 -->
+{% raw %}
 <div id="qexo-friends"></div>
+<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css"/>
+<script src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
+<script>document.addEventListener('pjax:complete', function () {if(document.querySelector("#qexo-friends")){loadQexoFriends("qexo-friends", "https://qexo.kemeow.top")}});loadQexoFriends("qexo-friends", "https://qexo.kemeow.top")</script>
+{% endraw %}
 
-<!-- 2. 友链样式表 -->
-<link rel="stylesheet" href="https://static.314926.xyz/css/qexo-friends/friends.css" />
+{% raw %}
+<!-- 1. 引入样式（可选，如果你需要官方默认皮肤） -->
+<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css" />
 
-<!-- 3. 友链脚本 -->
-<script src="https://static.314926.xyz/js/friend_api/friends.js"></script>
-
-<!-- 4. 调用函数：第二个参数换成你在 Qexo 后台设置的「站点名」
-                  （不是域名，是你添加友链时填的“站点名称”） -->
-<script>
-  loadQexoFriends("qexo-friends", "https://qexo.kemeow.top");   // ← 改成你自己的站点名
-</script>
-
+<!-- 2. 占位节点 -->
 <div id="friends-api"></div>
-<script src="https://unpkg.com/qexo-friends/friends-api.js"></script>
-<script>qexo_friend_api("friends-api","https://qexo.kemeow.top");</script>
 
+<!-- 3. 异步加载脚本并执行 -->
+<script>
+(function () {
+    /* 创建 <script> 标签，异步加载 friends-api.js */
+    const script = document.createElement('script');
+    script.src = '/js/custom.js';
+    script.async = true;
+    script.onload = run;          // 加载完成后立即执行一次
+    document.head.appendChild(script);
+
+    /* 首次执行 + PJAX 导航后重新执行 */
+    function run() {
+        /* 第二个参数换成你的 Qexo 域名，第三个参数是 reCaptcha 密钥，没有就留空 */
+        qexo_friend_api('friends-api', 'https://qexo.kemeow.top', '');
+    }
+
+    /* 支持 PJAX（如 Butterfly、Volantis 等主题） */
+    document.addEventListener('pjax:complete', run);
+})();
+</script>
+{% endraw %}
 ---
 
 ## 友情链接
