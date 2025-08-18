@@ -6,18 +6,16 @@ type: links
 data: links
 ---
 
-## Qexo 友链信息
+## Qexo 友链信息 && 申请友链
 
 <div id="qexo-friends"></div>
 <link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css"/>
 <script src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
 <script>loadQexoFriends("qexo-friends", "https://qexo.kemeow.top")</script>
 
-## Qexo 友链申请
-
 <div id="friends-api"></div>
 <script src="https://static.314926.xyz/js/friend_api/friends-api.js"></script>
-<script>qexo_friend_api("friends-api","https://qexo.kemeow.top","");</script>
+<script>qexo_friend_api("friends-api","https://qexo.kemeow.top","6LdPG6orAAAAAG7FOEa40HlG334qveRscqtdmxzl");</script>
 
 ---
 
