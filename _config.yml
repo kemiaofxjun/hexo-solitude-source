@@ -118,7 +118,7 @@ feed:
   autodiscovery: true # 在 HTML 头部添加自动发现标签
 
 # 数学公式渲染配置
-markdown:
+#markdown:
   preset: 'default' # 使用的 MD 语法，默认使用的 GFM
   render:
     html: true # 渲染 html
@@ -155,8 +155,9 @@ swpp:
 
 # 文章链接转数字或字母：https://github.com/rozbo/hexo-abbrlink
 abbrlink:
-    alg: crc16   #算法： crc16(default) and crc32
+    alg: crc32 #算法： crc16(default) and crc32
     rep: hex     #进制： dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex
+    drafts: false   # (true)处理草稿/(false)默认不处理草稿
 
 # https://github.com/hexojs/hexo-generator-sitemap
 sitemap:
