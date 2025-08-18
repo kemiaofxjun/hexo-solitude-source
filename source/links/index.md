@@ -11,10 +11,7 @@ data: links
 <div id="qexo-friends"></div>
 <link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css"/>
 <script src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
-<script>
-document.addEventListener('pjax:complete', function () {
-    loadQexoFriends('qexo-friends', 'https://qexo.kemeow.top');
-});
+<script>document.addEventListener('pjax:complete', function () {if(document.querySelector("#qexo-friends")){loadQexoFriends("qexo-friends", "https://qexo.kemeow.top")}});loadQexoFriends("qexo-friends", "https://qexo.kemeow.top")</script>
 </script>
 
 <div id="friends-api"></div>
