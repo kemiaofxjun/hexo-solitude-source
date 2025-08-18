@@ -16,7 +16,7 @@ data: links
 ## Qexo 友链申请
 
 <div id="friends-api"></div>
-<script src="https://unpkg.com/qexo-friends/friends-api.js"></script>
+<script src="https://static.314926.xyz/js/friend_api/friends-api.js"></script>
 <script>qexo_friend_api("friends-api","https://qexo.kemeow.top","");</script>
 
 ---
