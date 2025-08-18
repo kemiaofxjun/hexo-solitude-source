@@ -11,6 +11,8 @@ data: links
 <div id="qexo-friends"></div>
 <link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css">
 <script defer src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
+
+{% raw %}
 <script>
   function initFriends() {
     if (document.querySelector('#qexo-friends')) {
@@ -20,6 +22,7 @@ data: links
   initFriends();
   document.addEventListener('pjax:complete', initFriends);
 </script>
+{% endraw %}
 
 <div id="friends-api"></div>
 <script src="/js/custom.js"></script>
