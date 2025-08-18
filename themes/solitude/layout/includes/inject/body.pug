@@ -11,30 +11,36 @@ mixin katex
         })();
 
 div
+  // Critical scripts loaded synchronously
   script(src=url_for(theme.cdn.utils))
   script(src=url_for(theme.cdn.main))
-  script(src=url_for(theme.cdn.waterfall))
+  
+  // Non-critical scripts loaded asynchronously
+  script(async src=url_for(theme.cdn.waterfall))
   script(src=url_for(theme.cdn.pjax))
 
+  // Feature-specific scripts loaded asynchronously
   if theme.post.share.enable && theme.post.share.list && theme.post.share.list.includes('qrcode')
-    script(src=url_for(theme.cdn.qrcode))
+    script(async src=url_for(theme.cdn.qrcode))
 
   if theme.mermaid
-    script(src=url_for(theme.cdn.mermaid_js))
+    script(defer src=url_for(theme.cdn.mermaid_js))
 
   if theme.chart
-    script(src=url_for(theme.cdn.chart_js))
+    script(defer src=url_for(theme.cdn.chart_js))
 
   if theme.typeit || typeof theme.hometop.banner.desc === 'object'
-    script(src=url_for(theme.cdn.typeit_js))
+    script(defer src=url_for(theme.cdn.typeit_js))
 
   if theme.display_mode.universe
-    script(src=url_for(theme.cdn.universe_js))
+    script(defer src=url_for(theme.cdn.universe_js))
     script.
-      dark()
+      document.addEventListener('DOMContentLoaded', () => {
+        if (typeof dark === 'function') dark();
+      });
 
   if theme.translate.enable
-    script(src=url_for(theme.cdn.translate_js))
+    script(defer src=url_for(theme.cdn.translate_js))
 
   if theme.katex && theme.katex.enable
     if theme.katex.per_page && (is_post() || is_page())
@@ -42,54 +48,59 @@ div
     else if page.katex
       +katex
 
+  // UI enhancement scripts
   if theme.lazyload.enable
-    script(src=url_for(theme.cdn.lazyload))
-  script(src=url_for(theme.cdn.snackbar))
+    script(async src=url_for(theme.cdn.lazyload))
+  script(defer src=url_for(theme.cdn.snackbar))
   if theme.lightbox
     if theme.mediumZoom
-      script(src=url_for(theme.cdn.medium_zoom))
+      script(defer src=url_for(theme.cdn.medium_zoom))
     if theme.fancybox
-      script(src=url_for(theme.cdn.fancyapps_ui))
+      script(defer src=url_for(theme.cdn.fancyapps_ui))
   if (theme.brevity.home_mini && theme.brevity.enable)
-    script(src=url_for(theme.cdn.swiper_js))
+    script(defer src=url_for(theme.cdn.swiper_js))
 
   if theme.post.ai.enable
-    script(src=url_for(theme.cdn.post_ai))
+    script(defer src=url_for(theme.cdn.post_ai))
 
+  // Music player scripts
   if theme.capsule.enable || theme.music.enable || theme.brevity.enable && theme.brevity.music
     script.
       var meting_api = '!{theme.meting_api}';
-    script(src=url_for(theme.cdn.aplayer_js))
-    script(src=url_for(theme.cdn.meting_js))
+    script(defer src=url_for(theme.cdn.aplayer_js))
+    script(defer src=url_for(theme.cdn.meting_js))
 
+  // Cover color processing scripts
   if theme.post.covercolor.enable
     case theme.post.covercolor.mode
       when 'local'
-        script(src=url_for(theme.cdn.color_thief))
-        script(src=url_for(theme.cdn.cover_local))
+        script(defer src=url_for(theme.cdn.color_thief))
+        script(defer src=url_for(theme.cdn.cover_local))
       when 'api'
         script.
           const coverColorConfig = {
             api: '!{theme.post.covercolor.api}',
             time: !{theme.post.covercolor.time}
           }
-        script(src=url_for(theme.cdn.cover_api))
+        script(defer src=url_for(theme.cdn.cover_api))
       when 'ave'
         script.
           const coverColorConfig = {
             time: !{theme.post.covercolor.time}
           }
-        script(src=url_for(theme.cdn.cover_ave))
+        script(defer src=url_for(theme.cdn.cover_ave))
 
   if theme.loading.pace
     include ../mixins/pace.pug
 
+  // Search functionality
   if theme.search.enable && theme.search.type === "algolia"
-    script(src=url_for(theme.cdn.instantsearch))
-    script(src=url_for(theme.cdn.algolia_search))
+    script(defer src=url_for(theme.cdn.instantsearch))
+    script(defer src=url_for(theme.cdn.algolia_search))
 
+  // Right menu functionality
   if theme.right_menu.enable
-    script(src=url_for(theme.cdn.right_menu_js))
+    script(defer src=url_for(theme.cdn.right_menu_js))
 
   if theme.extends.body
     each item in theme.extends.body
@@ -103,7 +114,7 @@ div
       script.
         GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll(".bber-content-img img"));
         sco.changeTimeFormat(document.querySelectorAll('.bber-info-time time'))
-    if comment_js
+    if page.comment
       include ../widgets/third-party/comments/js
     if theme.mermaid
       script.

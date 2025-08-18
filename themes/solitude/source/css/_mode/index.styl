@@ -41,11 +41,9 @@
   --style-border-forever 2px solid var(--efu-lighttext)
   --efu-hl-bg $hl_bg_dark
   --efu-hltools-bg $hltools_bg_dark
-
-  if hexo-config('background.enable')
-    --efu-background rgba(24, 23, 29, 0.3)
-  else
-    --efu-background #18171d
+  --efu-background #18171d
+  --loading-bg #000000dd
+  --essay-bg #000
 
 [data-theme=light]
   --efu-theme $light_theme
@@ -92,11 +90,9 @@
   --efu-navbg var(--efu-theme-op)
   --efu-hl-bg $hl_bg_light
   --efu-hltools-bg $hltools_bg_light
-
-  if hexo-config('background.enable')
-    --efu-background #f7f9fe
-  else
-    --efu-background #f7f9fe
+  --efu-background #f7f9fe
+  --loading-bg #ffffffdd
+  --essay-bg #fff
 
 :root
   +maxWidth768()

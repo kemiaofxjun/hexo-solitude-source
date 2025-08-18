@@ -5,7 +5,7 @@ hexo.extend.filter.register(
       site: {
         name: {
           class: "text",
-          custom: "Solitude",
+          custom: "astrabay",
         },
         siteIcon: "/img/pwa/favicon.ico",
         icon: "icon",
@@ -21,16 +21,16 @@ hexo.extend.filter.register(
       hometop: {
         enable: false,
         banner: {
-          title: "Solitude",
+          title: "AstraBay",
           url: "A simple theme for Hexo",
           icon: null,
         },
         group: null,
         recommendList: {
           sup: "Recommend",
-          title: "Solitude Docs",
-          url: "https://solitude.js.org/",
-          img: "/img/default.avif",
+          title: "AstraBay Docs",
+          url: "https://blog.starsharbor.com/",
+          img: "/img/default.webp",
           color: "none",
         },
       },
@@ -41,10 +41,10 @@ hexo.extend.filter.register(
         card: {
           author: {
             img: "/img/logo.png",
-            sticker: "/img/happy-sticker.avif",
+            sticker: "/img/happy-sticker.webp",
           },
           url: "/about/",
-          content1: "Solitude",
+          content1: "AstraBay",
           state: {
             morning: "Good Morning",
             noon: "Good Noon",
@@ -82,11 +82,11 @@ hexo.extend.filter.register(
         tags: true,
         categories: true,
         archives: 0,
-        default: { cover: ["/img/default.avif"] },
+        default: { cover: ["/img/default.webp"] },
       },
       post: {
         default: {
-          cover: ["/img/default.avif"],
+          cover: ["/img/default.webp"],
           locate: "China, Changsha",
           copyright: {
             enable: true,
@@ -125,7 +125,7 @@ hexo.extend.filter.register(
         share: { enable: false, list: [] },
         footer: {
           enable: true,
-          desc: "The article from Solitude",
+          desc: "The article from AstraBay",
           button: {
             enable: true,
             name: "Learn More",
@@ -208,8 +208,8 @@ hexo.extend.filter.register(
       lazyload: {
         enable: false,
         field: "site",
-        placeholder: "/img/loading.avif",
-        errorimg: "/img/error_load.avif",
+        placeholder: "/img/loading.webp",
+        errorimg: "/img/error_load.webp",
       },
       loading: {
         fullpage: false,

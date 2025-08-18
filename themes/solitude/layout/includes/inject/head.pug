@@ -4,6 +4,7 @@ each item in theme.verify_site || []
 link(rel="canonical" href=urlNoIndex())
 link(rel="stylesheet", href=url_for(theme.cdn.fontawesome))
 
+// Feature-specific CSS
 // aplayer
 if theme.capsule.enable || theme.music.enable || theme.brevity.enable && theme.brevity.music
     link(rel="stylesheet", href=url_for(theme.cdn.aplayer_css))
@@ -27,7 +28,7 @@ include ../head/opengraph.pug
 include ../head/pwa.pug
 
 script.
-    console.log(' %c Solitude %c ' + '!{packageVersion()}' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    console.log(' %c AstraBay %c ' + '!{packageVersion()}' + ' %c https://github.com/Stars-harbor/astrabay',
         'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
         'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
         'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
