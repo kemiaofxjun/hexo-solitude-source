@@ -8,66 +8,59 @@ data: links
 
 ## Qexo 友链信息 && 申请友链
 
-<!-- 1. 友链容器 -->
-{% raw %}
-<!-- 1. 占位节点 -->
+<!-- ============ 友链列表（loadQexoFriends） ============ -->
+<!-- 占位节点 -->
 <div id="qexo-friends"></div>
 
-<!-- 2. 异步加载样式 & 脚本，并初始化 -->
-<script>
-(function () {
-    /* 动态插入 CSS */
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://unpkg.com/qexo-friends/friends.css';
-    document.head.appendChild(link);
-
-    /* 动态加载 JS */
-    const script = document.createElement('script');
-    script.src = 'https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js';
-    script.async = true;
-    script.onload = run;          // 首次执行
-    document.head.appendChild(script);
-
-    /* 封装初始化函数，供首次和 PJAX 调用 */
-    function run() {
-        loadQexoFriends('qexo-friends', 'https://qexo.kemeow.top');
-    }
-
-    /* PJAX 完成后重新渲染 */
-    document.addEventListener('pjax:complete', run);
-})();
-</script>
-{% endraw %}
-
-{% raw %}
-<!-- 1. 引入样式（可选，如果你需要官方默认皮肤） -->
-<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css" />
-
-<!-- 2. 占位节点 -->
+<!-- ============ 友链申请表单（qexo_friend_api） ============ -->
+<!-- 占位节点 -->
 <div id="friends-api"></div>
 
-<!-- 3. 异步加载脚本并执行 -->
+<!-- ============ 样式 ============ -->
+<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css" />
+
+<!-- ============ 异步脚本加载 + 初始化 ============ -->
 <script>
 (function () {
-    /* 创建 <script> 标签，异步加载 friends-api.js */
-    const script = document.createElement('script');
-    script.src = '/js/custom.js';
-    script.async = true;
-    script.onload = run;          // 加载完成后立即执行一次
-    document.head.appendChild(script);
+    /* 1. 公共 Qexo 域名，统一维护，方便一键替换 */
+    const QEXO_DOMAIN = 'https://qexo.kemeow.top';
 
-    /* 首次执行 + PJAX 导航后重新执行 */
-    function run() {
-        /* 第二个参数换成你的 Qexo 域名，第三个参数是 reCaptcha 密钥，没有就留空 */
-        qexo_friend_api('friends-api', 'https://qexo.kemeow.top', '');
+    /* 2. 加载友链列表脚本 */
+    const listScript = document.createElement('script');
+    listScript.src = 'https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js';
+    listScript.async = true;
+    listScript.onload = initFriendsList;   // 列表脚本加载完再渲染列表
+    document.head.appendChild(listScript);
+
+    /* 3. 加载友链申请脚本 */
+    const apiScript = document.createElement('script');
+    apiScript.src = '/js/custom.js';
+    apiScript.async = true;
+    apiScript.onload = initFriendsApi;     // 表单脚本加载完再渲染表单
+    document.head.appendChild(apiScript);
+
+    /* 4. 渲染函数：友链列表 */
+    function initFriendsList() {
+        if (document.getElementById('qexo-friends')) {
+            loadQexoFriends('qexo-friends', QEXO_DOMAIN);
+        }
     }
 
-    /* 支持 PJAX（如 Butterfly、Volantis 等主题） */
-    document.addEventListener('pjax:complete', run);
+    /* 5. 渲染函数：友链申请表单 */
+    function initFriendsApi() {
+        if (document.getElementById('friends-api')) {
+            qexo_friend_api('friends-api', QEXO_DOMAIN, '');
+        }
+    }
+
+    /* 6. PJAX 完成后重新渲染（两个模块互不干扰） */
+    document.addEventListener('pjax:complete', function () {
+        initFriendsList();
+        initFriendsApi();
+    });
 })();
 </script>
-{% endraw %}
+
 ---
 
 ## 友情链接(同样可以)
