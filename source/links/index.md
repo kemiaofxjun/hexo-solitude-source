@@ -24,7 +24,7 @@ data: links
 
 <div id="friends-api"></div>
 <script src="https://static.314926.xyz/js/friend_api/friends-api.js"></script>
-<script>qexo_friend_api("friends-api","https://qexo.kemeow.top","6LdPG6orAAAAAG7FOEa40HlG334qveRscqtdmxzl");</script>
+<script>qexo_friend_api("friends-api","https://qexo.kemeow.top");</script>
 
 ---
 
