@@ -8,55 +8,48 @@ data: links
 
 ## Qexo 友链信息 && 申请友链
 
-<!-- ============ 友链列表（loadQexoFriends） ============ -->
-<!-- 占位节点 -->
-<div id="qexo-friends"></div>
+<!-- ===== 友链列表 ===== -->
+<div id="qexo-friends-list"></div>
 
-<!-- ============ 友链申请表单（qexo_friend_api） ============ -->
-<!-- 占位节点 -->
-<div id="friends-api"></div>
+<!-- ===== 友链申请表单 ===== -->
+<div id="qexo-friends-apply"></div>
 
-<!-- ============ 样式 ============ -->
+<!-- ===== 样式（通用） ===== -->
 <link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css" />
 
-<!-- ============ 异步脚本加载 + 初始化 ============ -->
+<!-- ===== 异步加载脚本 ===== -->
 <script>
 (function () {
-    /* 1. 公共 Qexo 域名，统一维护，方便一键替换 */
-    const QEXO_DOMAIN = 'https://qexo.kemeow.top';
+    const QEXO = 'https://qexo.kemeow.top';   // 统一域名
 
-    /* 2. 加载友链列表脚本 */
-    const listScript = document.createElement('script');
-    listScript.src = 'https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js';
-    listScript.async = true;
-    listScript.onload = initFriendsList;   // 列表脚本加载完再渲染列表
-    document.head.appendChild(listScript);
-
-    /* 3. 加载友链申请脚本 */
-    const apiScript = document.createElement('script');
-    apiScript.src = '/js/custom.js';
-    apiScript.async = true;
-    apiScript.onload = initFriendsApi;     // 表单脚本加载完再渲染表单
-    document.head.appendChild(apiScript);
-
-    /* 4. 渲染函数：友链列表 */
-    function initFriendsList() {
-        if (document.getElementById('qexo-friends')) {
-            loadQexoFriends('qexo-friends', QEXO_DOMAIN);
+    /* 1. 加载列表脚本 */
+    const list = document.createElement('script');
+    list.src = 'https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js';
+    list.async = true;
+    list.onload = () => {
+        if (document.getElementById('qexo-friends-list')) {
+            loadQexoFriends('qexo-friends-list', QEXO);
         }
-    }
+    };
+    document.head.appendChild(list);
 
-    /* 5. 渲染函数：友链申请表单 */
-    function initFriendsApi() {
-        if (document.getElementById('friends-api')) {
-            qexo_friend_api('friends-api', QEXO_DOMAIN, '');
+    /* 2. 加载申请表单脚本 */
+    const api = document.createElement('script');
+    api.src = '/js/custom.js';
+    api.async = true;
+    api.onload = () => {
+        if (document.getElementById('qexo-friends-apply')) {
+            qexo_friend_api('qexo-friends-apply', QEXO, '');
         }
-    }
+    };
+    document.head.appendChild(api);
 
-    /* 6. PJAX 完成后重新渲染（两个模块互不干扰） */
-    document.addEventListener('pjax:complete', function () {
-        initFriendsList();
-        initFriendsApi();
+    /* 3. 支持 PJAX & Turbo 等无刷新跳转 */
+    document.addEventListener('pjax:complete', () => {
+        if (window.loadQexoFriends && document.getElementById('qexo-friends-list'))
+            loadQexoFriends('qexo-friends-list', QEXO);
+        if (window.qexo_friend_api && document.getElementById('qexo-friends-apply'))
+            qexo_friend_api('qexo-friends-apply', QEXO, '');
     });
 })();
 </script>
