@@ -9,24 +9,9 @@ data: links
 ## Qexo 友链信息 && 申请友链
 
 <div id="qexo-friends"></div>
-<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css">
-<script defer src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
-
-{% raw %}
-<script>
-  function initFriends() {
-    if (document.querySelector('#qexo-friends')) {
-      loadQexoFriends('qexo-friends', 'https://qexo.kemeow.top');
-    }
-  }
-  initFriends();
-  document.addEventListener('pjax:complete', initFriends);
-</script>
-{% endraw %}
-
-<div id="friends-api"></div>
-<script src="/js/custom.js"></script>
-<script>qexo_friend_api("friends-api","https://qexo.kemeow.top","");</script>
+<link rel="stylesheet" href="https://unpkg.com/qexo-friends/friends.css"/>
+<script src="https://registry.npmmirror.com/qexo-static/1.6.0/files/hexo/friends.js"></script>
+<script>loadQexoFriends("qexo-friends", "https://qexo.kemeow.top")</script>
 
 ---
 
