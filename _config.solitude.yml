@@ -48,6 +48,7 @@ nav:
       宝藏博主: javascript:travelling() || fas fa-gift
     页面:
       留言板: /comments/ || fas fa-comment
+      微语: /talks/ || far fa-comment
       追番: /bangumis/ || fas fa-film
       画廊: /gallery/ || fas fa-images
       最近评论: /recentcomment/ || fas fa-comments

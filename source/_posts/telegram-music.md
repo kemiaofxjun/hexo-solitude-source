@@ -8,8 +8,9 @@ tags:
   - 音乐播放器
 reprint: true
 cover: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/202505151341967.jpg'
-date: 2025-05-15 15:15:25
 recommend: true
+abbrlink: fedf
+date: 2025-05-15 15:15:25
 ---
 
 ## 来将 Telegram 当音乐播放器吧！（寻找音乐、即时歌词、无损音乐不失真压缩）
