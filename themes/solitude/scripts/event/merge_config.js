@@ -5,7 +5,7 @@ hexo.extend.filter.register(
       site: {
         name: {
           class: "text",
-          custom: "astrabay",
+          custom: "Solitude",
         },
         siteIcon: "/img/pwa/favicon.ico",
         icon: "icon",
@@ -21,16 +21,16 @@ hexo.extend.filter.register(
       hometop: {
         enable: false,
         banner: {
-          title: "AstraBay",
+          title: "Solitude",
           url: "A simple theme for Hexo",
           icon: null,
         },
         group: null,
         recommendList: {
           sup: "Recommend",
-          title: "AstraBay Docs",
-          url: "https://blog.starsharbor.com/",
-          img: "/img/default.webp",
+          title: "Solitude Docs",
+          url: "https://solitude.js.org/",
+          img: "/img/default.avif",
           color: "none",
         },
       },
@@ -41,10 +41,10 @@ hexo.extend.filter.register(
         card: {
           author: {
             img: "/img/logo.png",
-            sticker: "/img/happy-sticker.webp",
+            sticker: "/img/happy-sticker.avif",
           },
           url: "/about/",
-          content1: "AstraBay",
+          content1: "Solitude",
           state: {
             morning: "Good Morning",
             noon: "Good Noon",
@@ -82,11 +82,11 @@ hexo.extend.filter.register(
         tags: true,
         categories: true,
         archives: 0,
-        default: { cover: ["/img/default.webp"] },
+        default: { cover: ["/img/default.avif"] },
       },
       post: {
         default: {
-          cover: ["/img/default.webp"],
+          cover: ["/img/default.avif"],
           locate: "China, Changsha",
           copyright: {
             enable: true,
@@ -125,7 +125,7 @@ hexo.extend.filter.register(
         share: { enable: false, list: [] },
         footer: {
           enable: true,
-          desc: "The article from AstraBay",
+          desc: "The article from Solitude",
           button: {
             enable: true,
             name: "Learn More",
@@ -208,8 +208,8 @@ hexo.extend.filter.register(
       lazyload: {
         enable: false,
         field: "site",
-        placeholder: "/img/loading.webp",
-        errorimg: "/img/error_load.webp",
+        placeholder: "/img/loading.avif",
+        errorimg: "/img/error_load.avif",
       },
       loading: {
         fullpage: false,
@@ -368,9 +368,9 @@ hexo.extend.filter.register(
         text_next: "天前过期，如果内容不符，请联系站长更新。",
       },
       background: {
-        enable: false,
-        dark: "https://bu.dusays.com/2023/09/29/651685ce667d1.jpg",
-        light: "https://bu.dusays.com/2023/09/29/651685cc18d39.jpg",
+        enable: true,
+        dark: "https://img.314926.xyz/images/2025/08/15/cover21.webp",
+        light: "https://img.314926.xyz/images/2025/08/15/cover22.webp",
         opacity: 0.2,
       },
       translate: {

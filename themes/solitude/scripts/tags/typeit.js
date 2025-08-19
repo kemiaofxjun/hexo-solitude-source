@@ -1,5 +1,5 @@
 /**
- * Typeit.js tag for astrabay theme
+ * Typeit.js tag for Solitude theme
  */
 
 'use strict'

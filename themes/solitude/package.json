@@ -1,7 +1,7 @@
 {
-  "name": "hexo-theme-astrabay",
-  "version": "1.2.0",
-  "description": "基于Solitude主题二次开发的主题，存在一点点独特特性",
+  "name": "hexo-theme-solitude",
+  "version": "3.0.20",
+  "description": "A beautiful, powerful, and efficient Hexo theme developed by everfu.",
   "main": "package.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,24 +9,25 @@
   "keywords": [
     "hexo",
     "theme",
-    "astrabay",
+    "solitude",
     "Card UI Design",
-    "hexo-theme-solitude",
-    "hexo-theme-astrabay"
+    "@everfu",
+    "everly",
+    "hexo-theme-solitude"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Stars-harbor/astrabay"
+    "url": "https://github.com/everfu/hexo-theme-solitude"
   },
   "dependencies": {
     "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^3.0.0"
   },
   "bugs": {
-    "url": "https://github.com/Stars-harbor/astrabay/issues",
-    "email": "master@starsharbor.com"
+    "url": "https://github.com/everfu/hexo-theme-solitude/issues",
+    "email": "o@efu.me"
   },
-  "homepage": "https://blog.starsharbor.com/",
-  "author": "AstraBay<master@starsharbor.com>",
+  "homepage": "https://solitude.js.org",
+  "author": "Hexo-Theme-Solitude<o@efu.me>",
   "license": "Apache-2.0"
 }

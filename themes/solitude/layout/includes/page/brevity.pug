@@ -13,10 +13,10 @@ if theme.brevity.enable
                                     time.datetime.bber_date(datetime=moment(item.date).format())
                                 if theme.comment.use && item.content
                                     a.bber-reply.goComment(onclick=`sco.toTalk('${item.content}')`)
-                                        i.astrabay.fas.fa-comment
+                                        i.solitude.fas.fa-comment
 
                         #bber-content
-                            != item.content
+                            p.datacont= item.content
                             if item.image
                                 .bber-content-img
                                     each img in item.image
@@ -41,19 +41,19 @@ if theme.brevity.enable
                             .bber-bottom
                                 .bber-info
                                     .bber-info-time
-                                        i.astrabay.fas.fa-calendar-day
+                                        i.solitude.fas.fa-calendar-day
                                         time.datetime(datetime=moment(item.date).format())
                                     if item.location
                                         .bber-info-location
-                                            i.astrabay.fas.fa-location-dot
+                                            i.solitude.fas.fa-location-dot
                                             = item.location
                                     if item.link
                                         a.bber-content-link(href=url_for(item.link) target="_blank")
-                                            i.astrabay.fas.fa-link
+                                            i.solitude.fas.fa-link
                                             = _p('essay.link')
                                 if theme.comment.use && item.content
                                     a.bber-reply(onclick=`sco.toTalk('${item.content}')`)
-                                        i.astrabay.fas.fa-comment
+                                        i.solitude.fas.fa-comment
             #bber-tips
                 if theme.brevity.strip === -1
                     = _p('essay.tip0')

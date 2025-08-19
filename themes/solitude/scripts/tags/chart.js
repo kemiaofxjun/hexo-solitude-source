@@ -1,5 +1,5 @@
 /**
- * Chart.js tag for astrabay theme
+ * Chart.js tag for Solitude theme
  */
 
 'use strict'

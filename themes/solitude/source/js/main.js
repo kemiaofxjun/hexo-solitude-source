@@ -228,7 +228,7 @@ const sco = {
       $rmText.textContent = this.musicPlaying 
         ? GLOBAL_CONFIG.right_menu.music.stop
         : GLOBAL_CONFIG.right_menu.music.start;
-      $rmIcon.className = `astrabay fas ${this.musicPlaying ? 'fa-pause' : 'fa-play'}`;
+      $rmIcon.className = `solitude fas ${this.musicPlaying ? 'fa-pause' : 'fa-play'}`;
     }
 
     if (isMeting && $meting) {
@@ -283,7 +283,7 @@ const sco = {
   changeWittyWord() {
     const greetings = GLOBAL_CONFIG.aside.witty_words || [];
     if (greetings.length === 0) {
-      document.getElementById("sayhi").textContent = "Astrabay";
+      document.getElementById("sayhi").textContent = "Solitude";
       this.lastWittyWord = null;
       return;
     }
@@ -637,11 +637,11 @@ const addHighlight = () => {
   if (!(($isShowTool || limit) && $syntaxHighlight.length)) return;
 
   const copyEle = copy
-    ? `<i class="astrabay fas fa-copy copy-button"></i>`
+    ? `<i class="solitude fas fa-copy copy-button"></i>`
     : "<i></i>";
-  const expandEle = `<i class="astrabay fas fa-angle-down expand"></i>`;
+  const expandEle = `<i class="solitude fas fa-angle-down expand"></i>`;
   const limitEle = limit
-    ? `<i class="astrabay fas fa-angles-down"></i>`
+    ? `<i class="solitude fas fa-angles-down"></i>`
     : "<i></i>";
 
   const alertInfo = (ele, text) => utils.snackbarShow(text, false, 2000);
@@ -861,7 +861,7 @@ class tabs {
     if (expire.time > ex) return;
     const ele = document.createElement("div");
     ele.className = "expire";
-    ele.innerHTML = `<i class="astrabay fas fa-circle-exclamation"></i>${
+    ele.innerHTML = `<i class="solitude fas fa-circle-exclamation"></i>${
       expire.text_prev
     }${-(expire.time - ex)}${expire.text_next}`;
     const articleContainer = document.querySelector(".article-container");

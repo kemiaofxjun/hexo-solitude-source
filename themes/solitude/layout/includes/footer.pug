@@ -15,7 +15,7 @@ mixin postFooterBar()
           when 'i_class'
             +icon(theme.site.name.custom)
           when 'img'
-            img.astrabay.nolazyload(src=url_for(theme.site.name.custom))
+            img.solitude.nolazyload(src=url_for(theme.site.name.custom))
           when 'text'
             span= theme.site.name.custom
       
@@ -93,6 +93,8 @@ mixin copyrightInfo()
   
   .copyright © #{yearRange} By&nbsp;
     +link('/', config.author, { class: 'footer-bar-link' })
+      img.author-avatar(src=url_for(theme.site.icon))
+      = config.author
 
 //- 备案信息组件
 mixin beianInfo()
@@ -109,7 +111,7 @@ mixin beianInfo()
           span.beian-name= item.name
     
     +link(_p('hexo'), _p('framework_by') + 'Hexo', { class: 'footer-bar-link' })
-    +link(_p('repo'), _p('theme_by') + 'Astrabay', { class: 'footer-bar-link' })
+    +link(_p('repo'), _p('theme_by') + 'Solitude', { class: 'footer-bar-link' })
 
 //- 页脚右侧链接组件
 mixin footerRightLinks()

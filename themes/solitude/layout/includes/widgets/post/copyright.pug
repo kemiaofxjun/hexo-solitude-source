@@ -13,7 +13,7 @@
             if theme.post.rss
                 .reward-link.mode
                     a.reward-link-button(href=url_for(theme.post.rss))
-                        i.astrabay.fas.fa-seedling
+                        i.solitude.fas.fa-seedling
                         = _p('footer.rss')
     if theme.post.share.enable
         .social-share
@@ -26,31 +26,31 @@
                 case item
                     when 'qq'
                         a.social-share-ico.icon-qq(href=`https://connect.qq.com/widget/shareqq/index.html?url=${encodedPath}&title=${encodedTitle}&desc=${encodedDescription}&summary=${encodedDescription}&site=${encodedTitle}&pics=${encodedIcon}` title=_p('post.share.qq'))
-                            i.astrabay.fab.fa-qq
+                            i.solitude.fab.fa-qq
                     when 'weibo'
                         a.social-share-ico.icon-weibo(href=`http://service.weibo.com/share/share.php?url=${encodedPath}&title=${encodedTitle}&pic=${encodedIcon}` title=_p('post.share.weibo'))
-                            i.astrabay.fab.fa-weibo
+                            i.solitude.fab.fa-weibo
                     when 'telegram'
                         a.social-share-ico.icon-telegram(href=`https://t.me/share/url?url=${encodedPath}&text=${encodedTitle}` title=_p('post.share.telegram'))
-                            i.astrabay.fab.fa-telegram
+                            i.solitude.fab.fa-telegram
                     when 'whatsapp'
                         a.social-share-ico.icon-whatsapp(href=`https://api.whatsapp.com/send?text=${encodedTitle} ${encodedPath}` title=_p('post.share.whatsapp'))
-                            i.astrabay.fab.fa-whatsapp
+                            i.solitude.fab.fa-whatsapp
                     when 'linkedin'
                         a.social-share-ico.icon-linkedin(href=`https://www.linkedin.com/shareArticle?mini=true&url=${encodedPath}&title=${encodedTitle}&summary=${encodedDescription}&source=${encodedTitle}` title=_p('post.share.linkedin'))
-                            i.astrabay.fab.fa-linkedin
+                            i.solitude.fab.fa-linkedin
                     when 'facebook'
                         a.social-share-ico.icon-facebook(href=`https://www.facebook.com/sharer/sharer.php?u=${encodedPath}` title=_p('post.share.facebook'))
-                            i.astrabay.fab.fa-facebook
+                            i.solitude.fab.fa-facebook
                     when 'twitter'
                         a.social-share-ico.icon-twitter(href=`https://twitter.com/intent/tweet?url=${encodedPath}&text=${encodedTitle}` title=_p('post.share.twitter'))
-                            i.astrabay.fab.fa-twitter
+                            i.solitude.fab.fa-twitter
                     when 'link'
                         .social-share-ico.icon-link(onclick=`utils.copy("${path}")` title=_p('post.share.link'))
-                            i.astrabay.fas.fa-link
+                            i.solitude.fas.fa-link
                     when 'qrcode'
                         .social-share-ico.icon-qrcode(title=_p('post.share.qrcode'))
-                            i.astrabay.fas.fa-qrcode
+                            i.solitude.fas.fa-qrcode
                             .share-main
                                 .share-main-all
                                     #qrcode

@@ -24,7 +24,7 @@ const coverColor = (music = false) => {
 }
 
 function handleApiColor(path, music = false) {
-    const cacheGroup = JSON.parse(localStorage.getItem('AstraBay')) || {};
+    const cacheGroup = JSON.parse(localStorage.getItem('Solitude')) || {};
     if (cacheGroup.postcolor?.[path]) {
         setThemeColors(cacheGroup.postcolor[path].value);
     } else {
@@ -83,10 +83,10 @@ function setDefaultThemeColors() {
 }
 
 function cacheColor(src, color) {
-    const cacheGroup = JSON.parse(localStorage.getItem('AstraBay')) || {};
+    const cacheGroup = JSON.parse(localStorage.getItem('Solitude')) || {};
     cacheGroup.postcolor = cacheGroup.postcolor || {};
     cacheGroup.postcolor[src] = { value: color, expiration: Date.now() + coverColorConfig.time };
-    localStorage.setItem('AstraBay', JSON.stringify(cacheGroup));
+    localStorage.setItem('Solitude', JSON.stringify(cacheGroup));
 }
 
 function adjustBrightness(r, g, b) {

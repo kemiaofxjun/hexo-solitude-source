@@ -1,6 +1,6 @@
 /**
  * Tabs
- * from astrabay
+ * from solitude
  */
 
 "use strict";
@@ -20,7 +20,7 @@ function postTabs([name, active], content) {
       const tabHref = `${name.toLowerCase().replace(/\s+/g, "-")}-${tabId}`;
 
       const iconHtml = tabIcon
-        ? `<i class="${tabIcon.trim()} tab astrabay"></i>`
+        ? `<i class="${tabIcon.trim()} tab solitude"></i>`
         : "";
       const isActive = active === tabId ? " active" : "";
 
