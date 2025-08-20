@@ -1,0 +1,15 @@
+# 允许所有搜索引擎访问有价值的内容
+User-agent: *
+# 屏蔽纯数据文件
+Disallow: /friend.json
+# 屏蔽最新评论页
+Disallow: /recentcomment/
+# 屏蔽标签页（如果不想收录标签页）
+Disallow: /tags/
+# 屏蔽搜索结果页（避免重复内容）
+Disallow: /search
+# 如果不想收录 /talks/ 页面，取消下面注释
+# Disallow: /talks/
+
+# 指定站点地图位置（替换成你的实际 sitemap 地址）
+Sitemap: https://myboke.kemiaosw.top/sitemap.xml

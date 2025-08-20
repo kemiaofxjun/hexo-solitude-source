@@ -754,6 +754,7 @@ extends:
   # 插入到 head
   head:
     - '<meta name="google-site-verification" content="7Nebq9WeE49fvW5yWORhuSHIEMx9Pc2Z1HRzA683ZBs" />'
+    - '<meta name="robots" content="noindex, follow">'
     - <link rel="stylesheet" href="/schedule/schedule.css">
     - <link rel="stylesheet" href="/css/custom.css">
     - <link rel="stylesheet" href="/qexo-links/friends.css">
