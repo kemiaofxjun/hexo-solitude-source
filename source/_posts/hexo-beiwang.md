@@ -1157,7 +1157,7 @@ git push origin master
 
 
 {% note 'danger modern' 'fas fa-wand-magic-sparkles' %}
-要是还不行，那就删了 butterfly 主题文件夹下的.git 文件夹，然后再重复上述的 commit 操作。
+要是还不行，那就删了 solitude 主题文件夹下的.git 文件夹，然后再重复上述的 commit 操作。
 {% endnote %}
 <!-- endtab -->
 {% endtabs %}
