@@ -43,7 +43,12 @@
    npm i hexo-theme-solitude
    ```
 
-2. 应用主题
+2. 使用git来安装
+   ```bash
+   git clone -b dev https://github.com/kemiaofxjun/hexo-theme-solitude.git themes/solitude
+   ```
+
+3. 应用主题
 
    ```yaml
    theme: solitude

@@ -50,15 +50,15 @@ div
 
   // UI enhancement scripts
   if theme.lazyload.enable
-    script(async src=url_for(theme.cdn.lazyload))
+    script(src=url_for(theme.cdn.lazyload))
   script(defer src=url_for(theme.cdn.snackbar))
   if theme.lightbox
     if theme.mediumZoom
-      script(defer src=url_for(theme.cdn.medium_zoom))
+      script(src=url_for(theme.cdn.medium_zoom))
     if theme.fancybox
-      script(defer src=url_for(theme.cdn.fancyapps_ui))
+      script(src=url_for(theme.cdn.fancyapps_ui))
   if (theme.brevity.home_mini && theme.brevity.enable)
-    script(defer src=url_for(theme.cdn.swiper_js))
+    script(src=url_for(theme.cdn.swiper_js))
 
   if theme.post.ai.enable
     script(defer src=url_for(theme.cdn.post_ai))

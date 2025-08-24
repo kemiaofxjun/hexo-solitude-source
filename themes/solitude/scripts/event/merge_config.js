@@ -368,9 +368,9 @@ hexo.extend.filter.register(
         text_next: "天前过期，如果内容不符，请联系站长更新。",
       },
       background: {
-        enable: true,
-        dark: "https://img.314926.xyz/images/2025/08/15/cover21.webp",
-        light: "https://img.314926.xyz/images/2025/08/15/cover22.webp",
+        enable: false,
+        dark: "https://bu.dusays.com/2023/09/29/651685ce667d1.jpg",
+        light: "https://bu.dusays.com/2023/09/29/651685cc18d39.jpg",
         opacity: 0.2,
       },
       translate: {

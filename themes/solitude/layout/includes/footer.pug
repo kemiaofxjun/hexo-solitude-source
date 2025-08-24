@@ -91,10 +91,8 @@ mixin copyrightInfo()
   - const currentYear = new Date().getFullYear()
   - const yearRange = startYear === currentYear ? startYear : `${startYear} - ${currentYear}`
   
-  .copyright © #{yearRange} By&nbsp;
+  .copyright © #{yearRange} By
     +link('/', config.author, { class: 'footer-bar-link' })
-      img.author-avatar(src=url_for(theme.site.icon))
-      = config.author
 
 //- 备案信息组件
 mixin beianInfo()

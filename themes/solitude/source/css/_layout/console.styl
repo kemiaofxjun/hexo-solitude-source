@@ -34,10 +34,11 @@
     transition .3s
     gap .5rem
     max-height calc(100dvh - 180px)
-    max-width calc(100% - 64px)
+    max-width 1300px
 
-    +maxWidth1300()
+    +maxWidth1400()
       justify-content center
+      max-width calc(100% - 64px)
 
     +maxWidth768()
       display none
@@ -62,7 +63,7 @@
   .console-card-group-right
     display flex
     flex-direction column
-    justify-content center
+    justify-content flex-start
     height 100%
     width 60%
     overflow hidden
@@ -82,7 +83,7 @@
     flex-direction: column
 
   .console-card.tags
-    height calc(100% - 172px)
+    flex 1
     +maxHeight800()
       height 100%
 
@@ -251,15 +252,13 @@
 
   .console-card.history
     .card-archive-list
-      display flex
-      flex-direction row
-      flex-wrap wrap
-      justify-content flex-start
+      display grid
+      grid-template-columns repeat(4, 1fr)
       gap .5rem
-      height 164px
+      height auto
 
       li.item
-        flex 1 1 calc(100% / 4 - 1.5rem)
+        width 100%
 
       a
         border-radius 8px
