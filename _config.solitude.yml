@@ -342,6 +342,14 @@ theme_color:
   light: "#425AEF" # light
 # --------------------------- end ---------------------------
 
+# Background
+# 背景图片
+background:
+  enable: true
+  opacity: .2
+  dark: https://img.314926.xyz/images/2025/08/15/cover18.webp
+  light: https://img.314926.xyz/images/2025/07/30/cover8.webp
+
 # --------------------------- start ---------------------------
 # display mode
 # 显示模式
