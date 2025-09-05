@@ -15,7 +15,7 @@ mixin postFooterBar()
           when 'i_class'
             +icon(theme.site.name.custom)
           when 'img'
-            img.solitude.nolazyload(src=url_for(theme.site.name.custom))
+            img.astrabay.nolazyload(src=url_for(theme.site.name.custom))
           when 'text'
             span= theme.site.name.custom
       
@@ -75,7 +75,7 @@ mixin footerGroups()
               })
 
       //- 随机友链
-      +conditionalWrapper(theme.footer && theme.footer.randomlink)
+      if theme.footer && theme.footer.randomlink
         .footer-group
           .footer-title-group
             h3.footer-title= _p('footer.randomlink')
@@ -85,7 +85,6 @@ mixin footerGroups()
             )
               +icon('fas fa-arrows-rotate')
           .footer-links#friend-links-in-footer
-
 //- 版权信息组件
 mixin copyrightInfo()
   - const startYear = moment(theme.aside.siteinfo.runtime).year()
@@ -110,24 +109,25 @@ mixin beianInfo()
           span.beian-name= item.name
     
     +link(_p('hexo'), _p('framework_by') + 'Hexo', { class: 'footer-bar-link' })
-    +link(_p('repo'), _p('theme_by') + 'Solitude', { class: 'footer-bar-link' })
+    +link(_p('repo'), _p('theme_by') + 'Astrabay', { class: 'footer-bar-link' })
 
 //- 页脚右侧链接组件
 mixin footerRightLinks()
   +conditionalWrapper(theme.footer.links)
     .footer-bar-right
-      each item in theme.footer.links
-        +link(item.url, '', {
-          class: 'footer-bar-link',
-          alt: item.name
-        })
-          if item.icon
-            each icon in item.icon
-              +icon(icon)
-          else if item.img
-            img(src=url_for(item.img), alt=item.name)
-          else
-            != item.name
+      if theme.footer.links && theme.footer.links.length > 0
+        each item in theme.footer.links
+          +link(item.url, '', {
+            class: 'footer-bar-link',
+            alt: item.name
+          })
+            if item.icon
+              each icon in item.icon
+                +icon(icon)
+            else if item.img
+              img(src=url_for(item.img), alt=item.name)
+            else
+              != item.name
 
 //- 页脚底部栏组件
 mixin footerBar()

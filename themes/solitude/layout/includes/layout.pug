@@ -4,7 +4,7 @@
 
 include ./mixins/common.pug
 
-- page.type = is_home() ? 'solitude' : page.type
+- page.type = is_home() ? 'astrabay' : page.type
 
 doctype html
 html(lang=config.language, data-theme="light")
@@ -16,6 +16,10 @@ html(lang=config.language, data-theme="light")
         if theme.display_mode.universe
             +conditionalWrapper(theme.display_mode.universe)
                 canvas#universe
+        
+        //- 背景图
+        if theme.background.enable
+            #global_bg
 
         //- 全屏加载动画
         if theme.loading.fullpage

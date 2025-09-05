@@ -1,18 +1,4 @@
-# ---------------------------
-# Hexo Theme Solitude
-# Author: 伍十七(@everfu)
-# Github: https://github.com/everfu/hexo-theme-solitude
-#
-# Guide: https://solitude.js.org
-# You can get more detailed help from the guide
-# 指南：https://solitude.js.org/cn
-# 你可以从指南中获取更详细的帮助
-#
-# sponsor: https://ko-fi.com/everfu
-# 赞助：https://afdian.com/a/everfu
-# ---------------------------
-
-### Basic configuration
+## 本主题基于Solitude主题二次开发调整，配置文件可能有些许不同，请注意区别
 
 # --------------------------- start ---------------------------
 # Site information
@@ -20,7 +6,7 @@
 site:
   name:
     class: text # text / i_class / img
-    custom: Solitude # Solitude / fas fa-ghost / /img/pwa/favicon.ico
+    custom: AstraBay # AstraBay / fas fa-ghost / /img/pwa/favicon.ico
   icon: /img/pwa/favicon.png # Site icon / 网站图标
 # --------------------------- end ---------------------------
 
@@ -32,7 +18,7 @@ nav:
   # 左侧盒子
   group:
   #  project: # name
-  #    Solitude: https://github.com/everfu/hexo-theme-solitude || /img/pwa/favicon.ico # name: url || icon
+  #    name: url || icon
 
   # Menu
   # 菜单
@@ -97,12 +83,11 @@ hometop:
   group:
     # 热门: /tags/Fire/ || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
   recommendList:
-    enable: true
+    enable: false
     sup: 置顶
-    title: Solitude 官方文档
-    url: https://solitude.js.org/
-    img: /img/default.avif
-    color: "none"
+    title: AstraBay 演示站
+    url: https://blog.starsharbor.com/
+    img: /img/default.webp
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -150,8 +135,8 @@ aside:
     # social
     # 社交信息图标
     information:
-    #  Github: https://github.com/everfu || fab fa-github # Name: link || icon
-    #  Bilibili: https://space.bilibili.com/1329819902 || fab fa-bilibili
+    #  Name: link || icon
+    #  Bilibili: https://space.bilibili.com/345815762 || fab fa-bilibili
   # --------------------------- end ---------------------------
 
   # --------------------------- start ---------------------------
@@ -160,7 +145,7 @@ aside:
   toc:
     post: true
     page: false
-    vague: true
+    vague: true # 开启后不悬停目录有模糊效果
   # --------------------------- end ---------------------------
 
   # --------------------------- start ---------------------------
@@ -233,7 +218,7 @@ post:
     # Default image when no cover is set
     # 未设置封面时的默认图片
     cover:
-      # - /img/default.avif # 默认图片 / default cover
+      # -  # 默认图片 / default cover
     # Location
     # 位置
     locate: China
@@ -252,7 +237,8 @@ post:
   # 文章本地AI
   ai:
     enable: false
-    modelName: 小七 GPT
+    modelName: GPT
+    loading: 拼命加载中··· # 添加延迟加载期间的提示文字
   # Article meta information
   # 文章元信息
   meta:
@@ -314,7 +300,7 @@ post:
     # local: local color / api: api color / ave: oss average color
     mode: local
     # api address / api 地址
-    api: https://api.qjqq.cn/api/Imgcolor?img=
+    api: # 有需要请自行搭建
     # Storage / 缓存时间
     time: 43200000
   footer:
@@ -357,6 +343,16 @@ font:
   # Code font
   # 代码字体
   code-font-family: '"monospace", monospace'
+# --------------------------- end ---------------------------
+
+# --------------------------- start ---------------------------
+# Background
+# 背景图片
+background:
+  enable: false
+  opacity: .2
+  dark: https://i.pinimg.com/originals/d8/b3/9d/d8b39d12b653810db452c437211aeb2e.png
+  light: https://i.pinimg.com/originals/93/57/38/935738ed9657b296c2ef0ebd2151eb66.jpg
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -562,7 +558,7 @@ footer:
 # 404 page
 # 404 页面
 errorpage:
-  img: /img/404.avif
+  img: /img/404.webp
   text: =awa= Page Not Found # Text
   recommendList: true
 # --------------------------- end ---------------------------
@@ -573,7 +569,7 @@ errorpage:
 # can only use NetEase Cloud Music, QQ Music and other music platforms supported by the mainland China region,
 # the subsequent consideration of the use of JSON files to store music information and customize the implementation of the third-party API does not depend on the page.
 # Music Page
-meting_api: "https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r" # Custom API
+meting_api: "https://meting域名/?server=:server&type=:type&id=:id&auth=:auth&r=:r" # 如有需要建议自行搭建或寻找三方提供商
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -614,12 +610,15 @@ keyboard:
 
 # --------------------------- start ---------------------------
 # Lazyload
-# 懒加载
+# 图片懒加载
 lazyload:
   enable: false
+  # post, site
   field: site
+  # 加载时替换图
   placeholder: ""
-  errorimg: /img/error_load.avif
+  # 加载失败替换图
+  errorimg: /img/error_load.webp
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -727,9 +726,11 @@ verify_site:
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
-# Legacy CSS Prefix 
-# CSS前缀配置
-css_prefix: true
+# CSS Prefix
+# CSS 前缀
+# When turned on, it will automatically prefix the CSS (to get better browser support), but this will increase the size of the CSS file.
+# 开启后会自动给 CSS 加前缀（以获得更好的浏览器支持），但这会增加 CSS 文件的大小。
+css_prefix: false
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -796,19 +797,19 @@ comment:
     enable: true
     storage: .5 # 缓存时间 1: 1天 / .5 : 半天 / Cache time 1: 1 day .5 : half a day
     limit: 5 # 评论数 / Number of comments
-# Twikoo: https://solitude.js.org/configuration/comment/twikoo
+# Twikoo
 twikoo: # https://twikoo.js.org/
   envId: # url: https://twikoo.sondy.top/
   region: # Environment locale, default is ap-shanghai, Tencent cloud environment fill ap-shanghai or ap-guangzhou; Vercel environment do not fill the.
   style: true # Use custom styles when turned on
   accessToken: # AccessToken
   option: # twikoo option
-# Waline: https://solitude.js.org/configuration/comment/waline
+# Waline
 waline: # https://waline.js.org/
   envId: # url: https://waline.wzsco.top
   pageview: false # Whether to enable page access statistics
   option: # waline configuration item
-# Valine: https://solitude.js.org/configuration/comment/valine
+# Valine
 valine:
   appId: # leancloud application app id
   appKey: # leancloud application app key
@@ -817,12 +818,12 @@ valine:
   visitor: false
   style: true # Use custom styles when turned on
   option: # options list
-# Artalk: https://solitude.js.org/configuration/comment/artalk
+# Artalk
 artalk:
   server: # server url
   site: # site name
   option: # options
-# Giscus: https://solitude.js.org/configuration/comment/giscus
+# Giscus
 giscus:
   repo: # GitHub repository name
   repo_id: # GitHub repository ID
@@ -839,7 +840,7 @@ search:
   enable: false
   type: # local / algolia / docsearch
   tags:
-    # - Solitude
+    # - AstraBay
     # - Hexo
   # Algolia
   algolia:
@@ -897,7 +898,7 @@ envelope:
 brevity:
   enable: false
   home_mini: false
-  music: false
+  music: true
   page: /essay/
   style: 1
   strip: 30
@@ -949,19 +950,12 @@ google_adsense:
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
-# CDN Configuration
-# CDN配置
+# 非必要请勿修改
 CDN:
-  # CDN providers configuration
-  # CDN提供商配置
   internal: local # local / cdnjs / jsdelivr / unpkg / custom
-  third_party: custom # cdnjs / jsdelivr / unpkg / custom
+  third_party: cdnjs # cdnjs / jsdelivr / unpkg / custom
   version: true # 是否使用版本号
-  
-  # Custom format for CDN URLs
-  # CDN URL 自定义格式
-  custom_format: https://cdn.jsdelivr.net/npm/${name}@${version}/${min_file}
-  
+  custom_format: https://fastly.jsdelivr.net/npm/${name}@${version}/${min_file} # 自定义格式
   # 直接覆盖默认 CDN 链接（优先级最高）
   options:
     # algolia_search:

@@ -8,7 +8,7 @@ include ../../../mixins/common.pug
 - const { use } = theme.comment
 
 //- 主热门内容组件
-+conditionalWrapper(use && use.length > 0)
+if use && use.length > 0
   case use[0]
     when 'Twikoo'
       include ./twikoo

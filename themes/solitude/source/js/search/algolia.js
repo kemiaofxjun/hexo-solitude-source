@@ -259,10 +259,10 @@ class AlgoliaSearch {
             scrollTo: false,
             showFirstLast: false,
             templates: {
-                first: '<i class="solitude fas fa-angles-left"></i>',
-                last: '<i class="solitude fas fa-angles-right"></i>',
-                previous: '<i class="solitude fas fa-angle-left"></i>',
-                next: '<i class="solitude fas fa-angle-right"></i>',
+                first: '<i class="astrabay fas fa-angles-left"></i>',
+                last: '<i class="astrabay fas fa-angles-right"></i>',
+                previous: '<i class="astrabay fas fa-angle-left"></i>',
+                next: '<i class="astrabay fas fa-angle-right"></i>',
             },
             cssClasses: {
                 root: "pagination",

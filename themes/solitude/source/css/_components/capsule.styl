@@ -1,16 +1,19 @@
 @keyframes changeright
-  0%, 50%, 100%
+  0%
     transform: rotate(0deg) scale(1.1)
     box-shadow: 0 0 2px #ffffff00
-  25%, 75%
-    transform: rotate(90deg) scale(1.1)
+  50%
+    transform: rotate(180deg) scale(1.1)
     box-shadow: 0 0 14px #ffffff
+  100%
+    transform: rotate(360deg) scale(1.1)
+    box-shadow: 0 0 2px #ffffff00
 
 @keyframes playingShadow
   0%, 100%
     box-shadow: 0 0px 12px -3px var(--efu-none)
   50%
-    box-shadow: 0 0px 12px 0px var(--efu-music)
+    box-shadow: 0 0px 12px 0px var(--efu-main)
 
 @keyframes lightBar
   0%, 100%
@@ -34,12 +37,15 @@
   cursor: pointer
   transition: all 0.5s, left 0s
   transform-origin: left bottom
+  box-shadow: var(--efu-shadow-border)
+  border: var(--style-border)
   border-radius: 40px
   overflow: hidden
   .aplayer-button
     display none
 
   &.playing
+    border: var(--style-border)
     box-shadow: 0 0px 12px -3px var(--efu-none)
     animation: playingShadow 5s linear infinite
 
@@ -54,7 +60,7 @@
         color: var(--efu-white)
 
     .aplayer
-      background: var(--efu-music)
+      background: var(--efu-main)
       backdrop-filter: saturate(180%) blur(20px)
       transform: translateZ(0)
 
@@ -81,7 +87,7 @@
       width 180px
       right 0
       left auto
-      background linear-gradient(to left,var(--efu-music) 60%,transparent)
+      background linear-gradient(to left,var(--efu-main) 60%,transparent)
     &:hover
       #nav-music-hoverTips > i:not(#music-play)
         display: block
@@ -95,21 +101,21 @@
       transition: 0.3s
       transform: rotate(0deg) scale(1)
       border: var(--style-border-always)
-      animation: changeright 24s linear infinite
+      animation: changeright 10s linear infinite
       animation-play-state: paused
 
     .aplayer-info
       height: 100%
       color: var(--efu-fontcolor)
       margin 0
-      margin-right 8px
+      margin-right 12px
       padding: 0
       display: flex
       align-items: center
 
   #nav-music-hoverTips
     color: var(--efu-white)
-    background: var(--efu-music)
+    background: var(--efu-main)
     width: 100%
     height: 100%
     position: absolute
@@ -133,7 +139,7 @@
       cursor pointer
 
   .aplayer
-    background: var(--efu-music)
+    background: var(--efu-main)
     border-radius: 60px
     height: 41px
     display: flex
@@ -246,6 +252,7 @@
   &.stretch .aplayer.aplayer-withlrc .aplayer-lrc
     width: 200px
     opacity: 1
+    padding-left: 8px
 
 .aplayer-thumb
   width: 0 !important

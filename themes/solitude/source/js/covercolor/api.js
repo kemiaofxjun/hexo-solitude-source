@@ -1,60 +1,36 @@
-const coverColor = (music = false) => {
-    if (music) {
-        var coverPath = document.querySelector("#nav-music .aplayer-pic").style.backgroundImage;
-        const coverPathMatch = /url\("([^"]+)"\)/.exec(coverPath);
-        coverPath = coverPathMatch ? coverPathMatch[1] : '';
-        if (coverPath) {
-            handleApiColor(coverPath,music);
-        }
+const coverColor = () => {
+    const pageColor = PAGE_CONFIG.color;
+    if (pageColor) {
+        setThemeColors(pageColor);
+        return;
     }
-    else {
-        const pageColor = PAGE_CONFIG.color;
-        if (pageColor) {
-            setThemeColors(pageColor);
-            return;
-        }
-        
-        const path = document.getElementById("post-cover")?.src;
-        if (path) {
-            handleApiColor(path);
-        } else {
-            setDefaultThemeColors();
-        }
+    
+    const path = document.getElementById("post-cover")?.src;
+    if (path) {
+        handleApiColor(path);
+    } else {
+        setDefaultThemeColors();
     }
 }
 
-function handleApiColor(path, music = false) {
-    const cacheGroup = JSON.parse(localStorage.getItem('Solitude')) || {};
+function handleApiColor(path) {
+    const cacheGroup = JSON.parse(localStorage.getItem('Astrabay')) || {};
     if (cacheGroup.postcolor?.[path]) {
         setThemeColors(cacheGroup.postcolor[path].value);
     } else {
         img2color(path);
     }
-    if (music) {
-        img2color(path, music);
-    }
 }
 
-function setMusicColor(value) {
-    if (!value) return setDefaultThemeColors();
-    const item = document.querySelector("#nav-music")
-    item.style.setProperty('--efu-music', value);
-}
-
-function img2color(src, music = false) {
+function img2color(src) {
     fetch(`${coverColorConfig.api}${encodeURIComponent(src)}`)
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
         })
         .then(data => {
-            if(music) {
-                setMusicColor(data.RGB);
-            }
-            else {
-                setThemeColors(data.RGB);
-                cacheColor(src, data.RGB);
-            }
+            setThemeColors(data.RGB);
+            cacheColor(src, data.RGB);
         })
         .catch(error => console.error('Error fetching color:', error));
 }
@@ -83,10 +59,10 @@ function setDefaultThemeColors() {
 }
 
 function cacheColor(src, color) {
-    const cacheGroup = JSON.parse(localStorage.getItem('Solitude')) || {};
+    const cacheGroup = JSON.parse(localStorage.getItem('AstraBay')) || {};
     cacheGroup.postcolor = cacheGroup.postcolor || {};
     cacheGroup.postcolor[src] = { value: color, expiration: Date.now() + coverColorConfig.time };
-    localStorage.setItem('Solitude', JSON.stringify(cacheGroup));
+    localStorage.setItem('AstraBay', JSON.stringify(cacheGroup));
 }
 
 function adjustBrightness(r, g, b) {
