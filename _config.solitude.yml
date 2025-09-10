@@ -141,9 +141,9 @@ aside:
       img: https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp # url
       sticker: https://img.314926.xyz/images/2025/08/15/zhi.webp # url, 24x24 size
     # 介绍 / Introduction
-    description: 欢迎来到克喵的博客！<br>如果网站有什么问题，优先CTRL+F5刷新一下。
+    description: 愿你看清一切真相后。依旧热爱你的家人和朋友。
     # 内容 / Content
-    content: # 这是我的博客 / This is my Blog
+    content: 欢迎来到克喵的博客！<br>如果网站有什么问题，优先CTRL+F5刷新一下。 # 这是我的博客 / This is my Blog
     state:
       morning: ✨ 早上好，新的一天开始了
       noon: 🍲 午餐时间

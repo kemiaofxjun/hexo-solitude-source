@@ -1,7 +1,7 @@
 banner_suffix:
 links:
-  - class_name: 小伙伴
-    descr: 一些可爱的朋友🥰
+  - class_name: 网上邻居
+    descr: 大佬们🥰
     type: item
     suffix:
     link_list:
@@ -15,7 +15,7 @@ links:
         descr: 纸鹿至麓不知路，支炉制露不止漉
       - name: wallleap
         link: https://myblog.wallleap.cn/
-        avatar: https://gravatar.wallleap.cn/avatar/be1ccdcf025a92b98a92e331e1b3662a?size=256
+        avatar: https://imgtg.kemeow.top/file/AgACAgUAAyEGAAScqokCAAMmaKqLdVfP6rV0QjlsLLMGBz4AAdF-AAKHwzEbqZxYVV9hJNQl8yumAQADAgADeAADNgQ.webp
         descr: Luwang's blog      
       - name: 张洪Heo
         link: https://blog.zhheo.com/
@@ -61,3 +61,12 @@ links:
         link: https://blog.anheyu.com/
         avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
         descr: 生活明朗，万物可爱
+  - class_name: 网上好友
+    descr: 互换友链的好友🥰
+    type: item
+    suffix:
+    link_list:
+      - name: Cynosura
+        link: https://cynosura.one
+        avatar: https://img.314926.xyz/images/2025/09/10/Cynosura.webp
+        descr: Trying to light up the dark.
