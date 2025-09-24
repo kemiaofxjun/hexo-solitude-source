@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 喵落阁
-subtitle: '克喵的博客'
+title: 喵洛阁
+subtitle: 克喵的书斋
 description: '愿你看清一切真相后，依旧热爱你的家人和朋友。'
 keywords: 克喵,kemiao,博客
 author: 克喵爱吃卤面
@@ -219,8 +219,8 @@ hexo_safego:
   # 页面外观设置
   appearance:
     avatar: https://img.314926.xyz/images/2025/08/13/no-background-kemiaofxjun.webp   # 跳转页面头像路径
-    title: "喵洛阁"            # 跳转页面标题
-    subtitle: "安全中心"         # 跳转页面副标题
+    title: 喵洛阁
+    subtitle: 克喵的书斋
     darkmode: auto              # 是否启用深色模式
     countdowntime: 4            # 跳转页面倒计时秒数，如果设置为负数则为不自动跳转
 
@@ -235,7 +235,7 @@ bangumi: # 追番设置
   source: bili
   path: 
   vmid: 3546643173477234
-  title: "追番列表"
+  title: 喵洛阁
   quote: "生命不息，追番不止！"
   show: 1
   lazyload: false

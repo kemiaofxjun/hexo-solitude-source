@@ -8,7 +8,7 @@ tags:
   - 语法
   - 强调语法
 reprint: true
-cover: 'https://imgtg.kemeow.top/file/AgACAgUAAyEGAAScqokCAAMKaHj_h2rkMAABtcX1LDXzMH-mlLSFAAIXyTEbCpvIV1d2cz5UpNogAQADAgADeQADNgQ.webp'
+cover: 'https://img.314926.xyz/images/2025/09/24/qiangdiao.webp'
 abbrlink: db29
 date: 2025-07-17 21:40:50
 ---

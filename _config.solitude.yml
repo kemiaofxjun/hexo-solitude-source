@@ -103,6 +103,7 @@ hometop:
         color: "#df5b40"
   group:
     资源分享: /categories/资源分享 || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
+    技术分享: /categories/技术分享 || fas fa-bug || linear-gradient(to right,#b09,#FFFFF0)
   recommendList:
     enable: true
     sup: 点击前往
