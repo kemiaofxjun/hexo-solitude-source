@@ -188,8 +188,11 @@ window.oncontextmenu = (ele) => {
         rm.copyText(selectTextNow);
     });
 
-    if (utils.saveToLocal.get("commentBarrageSwitch") !== null) {
-        rm.menuItems.barrage && rm.barrage(!utils.saveToLocal.get("commentBarrageSwitch"));
+    const barrageState = utils.saveToLocal.get("commentBarrageSwitch");
+    if (barrageState !== null) {
+        rm.menuItems.barrage && rm.barrage(!barrageState);
+    } else {
+        rm.menuItems.barrage && rm.barrage(true);
     }
 
     addEventListener(rm.menuItems.paste, "click", () => rm.pasteText() && rm.hideRightMenu());

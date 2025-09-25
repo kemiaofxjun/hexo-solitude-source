@@ -252,13 +252,15 @@
 
   .console-card.history
     .card-archive-list
-      display grid
-      grid-template-columns repeat(4, 1fr)
+      display flex
+      flex-direction row
+      flex-wrap wrap
       gap .5rem
       height auto
+      max-height 164px
 
       li.item
-        width 100%
+        flex 1 1 calc(100% / 4 - 1.5rem)
 
       a
         border-radius 8px

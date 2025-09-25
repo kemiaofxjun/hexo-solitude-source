@@ -1,8 +1,7 @@
 ---
 title: github-issues-moment
-date: 2025-09-24 22:58:31
 desc: 起源于在不同博客游览间，看到了一篇文章，感觉很有搞头，然后到了博主的GitHub仓库，然后有了些感受。
-cover: https://img.314926.xyz/images/2025/09/24/github-issues.webp
+cover: 'https://img.314926.xyz/images/2025/09/24/github-issues.webp'
 tags:
   - GitHub
   - Issues
@@ -11,7 +10,8 @@ categories:
   - 技术分享
 reprint: false
 recommend: true
-abbrlink:
+abbrlink: a56bd99b
+date: 2025-09-24 22:58:31
 ---
 
 > 起源于在不同博客游览间，看到了一篇[文章](https://lawtee.com/article/add-live-talking-page-for-static-blog/)，感觉很有搞头，然后到了博主的[GitHub仓库](https://github.com/h2dcc/moments)，然后有了些感受。

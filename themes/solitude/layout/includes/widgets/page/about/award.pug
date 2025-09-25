@@ -1,7 +1,12 @@
 - award = site.data.about.award
-
 - var sum = 0
-if site.data.about.rewardList && site.data.about.award.enable
+- var rewardList = site.data.about.rewardList || []
+- var sortedRewards = rewardList.sort((a, b) => b.time - a.time)
+
+each reward in rewardList
+    - sum += reward.money
+
+if rewardList.length > 0 && site.data.about.award.enable
     .author-content
         .author-content-item.single.reward
             .author-content-item-tips= _p('award.thanks')
@@ -9,16 +14,33 @@ if site.data.about.rewardList && site.data.about.award.enable
             .author-content-item-description
                 != award.description
             .reward-list-all
-                each reward in site.data.about.rewardList.sort((a, b) => b.time - a.time) || []
-                    - sum += reward.money
-                    .reward-list-item
-                        .reward-list-item-name= reward.name
+                each reward, index in sortedRewards
+                    if rewardList.length <= award.limit
+                        .reward-list-item
+                            .reward-list-item-name= reward.name
+                            .reward-list-bottom-group
+                                .reward-list-item-money(style="background-color:" + reward.color)
+                                    if reward.icon
+                                        i.astrabay(class=reward.icon)
+                                    | ¥ #{reward.money}
+                                time.datetime.reward-list-item-time(datetime=moment(reward.time).format())
+                    else if index < award.limit - 1
+                        .reward-list-item
+                            .reward-list-item-name= reward.name
+                            .reward-list-bottom-group
+                                .reward-list-item-money(style="background-color:" + reward.color)
+                                    if reward.icon
+                                        i.astrabay(class=reward.icon)
+                                    | ¥ #{reward.money}
+                                time.datetime.reward-list-item-time(datetime=moment(reward.time).format())
+
+                if rewardList.length > award.limit
+                    - const isInternalLink = award.more.startsWith('/')
+                    a.reward-list-item.reward-list-item-more(onclick=isInternalLink ? `pjax.loadUrl("${award.more}")`: null, href=isInternalLink ? null : url_for(award.more), target=isInternalLink ? null : "_blank")
+                        .reward-list-item-name 查看更多
                         .reward-list-bottom-group
-                            .reward-list-item-money(style="background-color:" + reward.color)
-                                if reward.icon
-                                    i.astrabay(class=reward.icon)
-                                | ¥ #{reward.money}
-                            time.datetime.reward-list-item-time(datetime=moment(reward.time).format())
+                            i.astrabay.fas.fa-circle-chevron-right
+
                 if theme.post.award.enable
                     .post-reward
                         .post-reward(onclick="AddRewardMask()")

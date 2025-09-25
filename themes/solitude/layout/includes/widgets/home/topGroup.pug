@@ -1,4 +1,7 @@
-- var filteredPosts = site.posts.data.filter(item => item.recommend === true).slice(0,6)
+- var filteredPosts = site.posts.data.filter(item => item.recommend);
+- var numericPosts = filteredPosts.filter(item => typeof item.recommend === 'number').sort((a, b) => a.recommend - b.recommend);
+- var booleanPosts = filteredPosts.filter(item => item.recommend === true);
+- var finalPosts = numericPosts.concat(booleanPosts).slice(0,6);
 if filteredPosts.length > 0
     .top-post-group
         each post in filteredPosts

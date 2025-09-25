@@ -257,3 +257,24 @@
 .aplayer-thumb
   width: 0 !important
   height: 0 !important
+
+@media screen and (max-width: 768px)
+  #nav-music
+    bottom: 10px !important
+    left: 10px !important
+
+    .aplayer
+      &.aplayer-withlist .aplayer-info
+        min-width: 65px !important
+
+    .aplayer
+      .aplayer-info
+        .aplayer-music
+          margin 0 auto !important
+
+    &.stretch .aplayer.aplayer-withlrc .aplayer-lrc
+      display: none !important
+      width: 0 !important
+      opacity: 0 !important
+      padding: 0 !important
+      margin: 0 !important

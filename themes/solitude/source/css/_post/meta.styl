@@ -72,16 +72,15 @@
         height 100%
         position relative
         overflow hidden
-        margin 0 -20% 0 auto
-        transform rotate(10deg) translateY(-8%) scale(1.8)
-        filter blur(30px)
+        margin 0
+        transform rotate(10deg) scale(1.5)
+        filter blur(20px)
         opacity 0
 
         &.loaded
           display block
-          opacity .5
+          opacity 1
           animation showCover 1s .3s backwards
-          transform rotate(10deg) translateY(-10%) scale(2)
 
       +maxWidth768()
         margin 0 0 0 auto
