@@ -20,7 +20,7 @@
     "hexo-abbrlink": "^2.2.1",
     "hexo-algoliasearch": "^2.0.1",
     "hexo-bilibili-bangumi": "^2.0.1",
-    "hexo-butterfly-clock-anzhiyu": "^1.1.8",
+    "hexo-butterfly-clock-anzhiyu": "^1.1.9",
     "hexo-cli": "^4.3.2",
     "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^2.0.0",
