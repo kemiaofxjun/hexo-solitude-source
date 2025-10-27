@@ -870,10 +870,10 @@ hexo-bilibili-bangumi@^2.0.1:
     pug "^3.0.3"
     tunnel "^0.0.6"
 
-hexo-butterfly-clock-anzhiyu@^1.1.8:
-  version "1.1.8"
-  resolved "https://registry.npmmirror.com/hexo-butterfly-clock-anzhiyu/-/hexo-butterfly-clock-anzhiyu-1.1.8.tgz#c124c2e24c611b229ed676f9f5b915a0a9678c19"
-  integrity sha512-fk9b7sv2qwKYc4aoxnQWW1gdpI4gbebNJFhFLfBxMShd+onq9MZw0Dhcn3nDiALbnu2GoHRHPk5PIJlaB2n3Qg==
+hexo-butterfly-clock-anzhiyu@^1.1.9:
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/hexo-butterfly-clock-anzhiyu/-/hexo-butterfly-clock-anzhiyu-1.1.9.tgz#2d63ea3e360a509f56018ee93018071b68a9c4bc"
+  integrity sha512-NrKUIfSCQZqDLFIGr2Y2vSbgx2Xrw4yIJySMqUsNun0SWsh/6xVKSDbA3cc+HhaJv71c3r4AKSWpcC0gwlLF/w==
   dependencies:
     pug "^3.0.0"
 
