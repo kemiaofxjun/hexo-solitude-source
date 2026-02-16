@@ -2011,10 +2011,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmmirror.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-swpp-backends@^3.0.0-alpha.908:
-  version "3.0.0-alpha.908"
-  resolved "https://registry.npmmirror.com/swpp-backends/-/swpp-backends-3.0.0-alpha.908.tgz#c43d07018be428e8cc39a500ca0a8fcac1fababe"
-  integrity sha512-FCGT65oj4NDTcpouxjYHo//EmBfK2pdkP20KPfopQlu/qNWirrI3ISNf4olGnwHaRTONlLSwlOvX6LjZQtE37A==
+swpp-backends@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/swpp-backends/-/swpp-backends-3.1.1.tgz#725d5a24a53e621899b1cb24a5a46d3caaf5fbf5"
+  integrity sha512-SNHlrh3oKNx0eMBox1TWUsdBsVPPa4EzuWcWcqKnoFv+VQO1zuANHaiH2Q/KD9LmTAS5VWWQHoIe0a+YAAj4cg==
   dependencies:
     commander "^12.1.0"
     jiti "^2.4.2"
