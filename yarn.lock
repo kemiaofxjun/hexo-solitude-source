@@ -1352,10 +1352,10 @@ jstransformer@1.0.0:
     is-promise "^2.0.0"
     promise "^7.0.1"
 
-katex@^0.16.22:
-  version "0.16.22"
-  resolved "https://registry.npmmirror.com/katex/-/katex-0.16.22.tgz#d2b3d66464b1e6d69e6463b28a86ced5a02c5ccd"
-  integrity sha512-XCHRdUw4lf3SKBaJe4EvgqIuWwkPSo9XoeO8GjQW94Bp7TWv9hNhzZjZ+OH9yf1UmLygb7DIT5GSFQiyt16zYg==
+katex@^0.16.32:
+  version "0.16.32"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.16.32.tgz#4f0cbfb68db20f2ea333173c35e8e45d729a65fa"
+  integrity sha512-ac0FzkRJlpw4WyH3Zu/OgU9LmPKqjHr6O2BxfSrBt8uJ1BhvH2YK3oJ4ut/K+O+6qQt2MGpdbn0MrffVEnnUDQ==
   dependencies:
     commander "^8.3.0"
 
